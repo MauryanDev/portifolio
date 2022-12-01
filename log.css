@@ -45,10 +45,9 @@ body {
 }
 
 .cabeçario::after {
+    content:"";
 
-    content: "";
-
-    width: 70px;
+    width: 90px;
 
     height: 1px;
 
