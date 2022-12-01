@@ -1,0 +1,55 @@
+body {
+    position: relative;
+    top: auto;
+    width: auto;
+    text-align: center;
+    font-size: 18px;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/006/425/831/non_2x/blue-stair-and-yellow-wall-sun-shade-tropical-plants-on-the-wall-abstract-background-3d-rendering-free-photo.jpg");
+}
+
+table {
+    border-style: double;
+    width: 100%;
+    font-size: 18px;
+}
+
+th,
+td {
+    font-size: 19px;
+    text-align: center;
+    padding: 8px;
+}
+
+tr {
+    background-color: #91b3db
+}
+
+th {
+    background-color: #3f94e4;
+    color: rgb(20, 20, 20);
+}
+
+div.test1 {
+    text-shadow: 1px 1px rgb(71, 68, 68);
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+
+}
+
+img {
+    border-radius: 40%;
+    border-color:orangered;
+
+}
+
+h3 {
+    background-color: #91b3db;
+
+
+}
+a{
+    color: aliceblue;
+}

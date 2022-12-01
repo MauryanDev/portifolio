@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banco</title>
+<link rel="stylesheet" href="styleemprestimo.css">
+<link rel="shortcut icon"
+    href="data:image/png;base64,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"
+    type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+</head>
+
+<body>
+    <div class="body"><br><br>
+        <h3>Prestações de 30% do Salário</h3><br><br>
+        <div id="reset">
+            Salário: <input type="number"  id="salario" min="0"
+                oninput="this.value = Math.abs(this.value)"><br><br>
+            Emprestimo: <input type="number" id="emprestimo" min="0"
+                oninput="this.value = Math.abs(this.value)"><br><br>
+            Prestações: <input type="number" id="prestacoes" min="0"
+                oninput="this.value = Math.abs(this.value)"><br><br>
+        </div>
+        <button class="but" id="enter" onclick="calcular()">Calcular</button><br><br>
+        <a type="hiden" href="Emprestimo.html" class="but" >Limpar Tabela</a>  <br><br>
+
+        <table id="table">
+            <tr>
+                <th colspan="4">Calcule o valor do seu empréstimo</th>
+            </tr>
+            <tr>
+                <th>Salário</th>
+                <th>Emprestimo</th>
+                <th>Prestações</th>
+                <th>Situação</th>
+
+            </tr>
+            <tbody id="tdr">
+
+
+        </table>
+        </tbody>
+    </div>
+
+</body>
+<script src="scriptemprestimo.js"></script>
+
+</html>

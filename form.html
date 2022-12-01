@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabajara</title>
+    <link rel="shortcut icon" href="https://static.vecteezy.com/ti/fotos-gratis/p1/7619234-fundo-azul-e-amarelo-com-espaco-de-copia-gr%C3%A1tis-foto.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styleform.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+</head>
+
+<body>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+        <img src="https://static.vecteezy.com/ti/fotos-gratis/p1/7619234-fundo-azul-e-amarelo-com-espaco-de-copia-gr%C3%A1tis-foto.jpg"
+            alt="Logotipo Tabajara" width="400" height="150">
+        <div class="test1">
+            <h1>Organizações Tabajara</h1>
+            <h2>Seus problemas terminaram...</h2>
+        </div>
+        <table>
+            <tr>
+                <th colspan="3" style="background-color:rgb(240, 150, 14) ; font-size: 25px;">Escolha a periodicidade de
+                    sua assinatura
+                </th>
+            </tr>
+
+            <tr>
+                <th>Assinatura</th>
+                <th>Renovação</th>
+                <th>Investimento</th>
+            </tr>
+            <tr>
+                <td>Turmalina</td>
+                <td>semanal</td>
+                <td>R$100,00</td>
+            </tr>
+            <tr>
+                <td>Rubi</td>
+                <td>mensal</td>
+                <td>R$300,00</td>
+            </tr>
+            <tr>
+                <td>Diamante</td>
+                <td>anual</td>
+                <td>R$1.000,00</td>
+            </tr>
+        </table><br>
+
+        <label for="name">Nome:</label><br>
+        <input type="text" name="Cliente" id="name"><br><br>
+
+        <h3>Tipos desejados</h3>
+
+        <label>
+            <input type="radio" name="Investimento" value="100,00">Turmalina
+        </label>
+        <label>
+            <input type="radio" name="Investimento" value="300,00">Rubi
+
+        </label>
+        <label>
+            <input type="radio" name="Investimento" checked value="1000">Diamante
+        </label><br><br>
+
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Redefinir">
+
+
+    </form>
+</body>
+
+</html>
