@@ -8,7 +8,7 @@
 
 :root {
     --cor-fundo: rgb(10, 10, 10);
-    --cor-hover: rgb(64, 66, 65);
+    --cor-hover: rgb(101, 104, 102);
     --cor-primaria: rgb(231, 241, 236);
 }
 
@@ -40,7 +40,7 @@ header .logo {
     transition: .6s;
 }
 
-p::after {
+.logo::after {
     content: "";
     width: auto;
     height: 1px;
@@ -87,6 +87,11 @@ header ul li a:hover {
     background-size: cover;
 }
 
+/*buton*/
+.menubtn {
+    display: none;
+}
+
 /*sub menu*/
 header ul ul {
     min-width: 160px;
@@ -94,6 +99,10 @@ header ul ul {
     left: 0;
     position: absolute;
     opacity: 50%;
+}
+
+header ul li ul li a {
+    padding: 5px 2px;
 }
 
 header ul li:hover ul {
@@ -138,7 +147,105 @@ header.sticky {
 
 }
 
+header.sticky ul li:hover ul {
+    background-color:var(--cor-primaria);
+
+}
+
 header.sticky .logo,
 header.sticky ul li a {
     color: var(--cor-fundo);
+}
+
+
+/*responsiv*/
+
+@media (max-width: 624px) {
+    .logo {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        position: relative;
+        padding: 10px;
+    }
+
+
+    /*buton*/
+    .menubtn {
+        background-color: none;
+        font-weight: 600;
+        color: var(--cor-hover);
+        font-size: 1.6em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: .6s;
+        color: var(--cor-primaria);
+        display: block;
+        position: relative;
+        padding: 20px;
+
+    }
+
+    .menubtn::after {
+        content: "";
+        width: auto;
+        height: 1px;
+        background-color: var(--cor-primaria);
+        display: block;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        display: none;
+        min-width: 200px;
+        background-color: var(--cor-hover);
+        padding: 16px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        border-radius: 15px;
+
+
+    }
+
+    .navbar-links ul li a {
+        position: relative;
+        margin: 0 15px;
+        text-decoration: none;
+        color: var(--cor-primaria);
+        letter-spacing: 2px;
+        font-weight: 500px;
+        transition: .6s;
+        display: block;
+        padding: 5px 2px;
+        width: 100%;
+    }
+
+    .navbar-links ul li {
+
+    }
+
+    .navbar-links ul li ul li a {
+        padding: 5px 2px;
+        width: 100%;
+    }
+
+    .dropdown:hover .navbar-links {
+        display: block;
+    }
+    header.sticky p{
+        color:var(--cor-fundo);
+    }
 }
