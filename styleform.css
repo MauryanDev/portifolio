@@ -1,9 +1,20 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
-    position: relative;
+    position:relative;
     top: auto;
     width: auto;
     text-align: center;
-    font-size: 18px;
+   font-size: 18px;
+}
+.banner{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
     background-image: url("https://static.vecteezy.com/system/resources/previews/006/425/831/non_2x/blue-stair-and-yellow-wall-sun-shade-tropical-plants-on-the-wall-abstract-background-3d-rendering-free-photo.jpg");
 }
 
@@ -31,8 +42,9 @@ th {
 
 div.test1 {
     text-shadow: 1px 1px rgb(71, 68, 68);
-    position: absolute;
-    top: 13%;
+    position: relative;
+    flex-direction: column;
+    top: -80px;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 14px;
@@ -52,4 +64,12 @@ h3 {
 }
 a{
     color: aliceblue;
+}
+@media (max-width: 624px){
+.banner{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
 }
