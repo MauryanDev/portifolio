@@ -34,7 +34,7 @@ section{
     box-shadow: 4px 30px 16px 0px rgba(50, 50, 50, 0.45);
 }
 .rede#instagram{
-    background-color: #ca0a0a;
+    background-color: #830909;
 }
 .rede#email{
     background-color: #ffff;
@@ -44,4 +44,10 @@ section{
     padding: 35px;
     width: 80px;
 
+}
+.rede#email .icone{
+ display: flex;
+ justify-items: center;
+ align-items: center;
+ height: 11.5vh;
 }
