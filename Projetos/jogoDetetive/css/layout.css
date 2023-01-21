@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family:'Josefin Sans';
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+h1{
+    color: azure;
+    height:50px;
+}
+h1::after {
+    content: "";
+    width: auto;
+    height: 1px;
+    background-color: white;
+    display: block;
+}
+
+.back {
+    z-index: -1;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: url("../img/back.gif") no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.suspeitos {
+    display: flex;
+    gap: .8rem;
+    box-sizing: border-box;
+}
+
+.p {
+    margin: 10px;
+    width: 190px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 6px 6px 12px rgba(5, 74, 114, 0.64);
+    border: 2px solid rgb(104, 156, 235);;
+
+}
+.suspeitos:hover> :not(:hover) {
+    filter: brightness(0.25);
+}
+
+.bot {
+    display: flex;
+    margin: 10px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+}
+
+input {
+    font-size: 20px;
+    font-family: 'Josefin Sans';
+    padding: 5px;
+    width: 100%;
+    background:linear-gradient(90deg, rgb(222, 226, 231) 0%, rgb(104, 156, 235) 100%);
+    border: 2px solid rgb(104, 156, 235);
+    border-radius: 10px;
+}
+.popup{
+    padding: 10px;
+    position: fixed;
+    top: 200px;
+    display: none;
+    width: 600px;
+    height: auto;
+    border-radius: 20px;
+    background-color:rgb(56, 56, 95);
+
+}
+.diagsaida{
+    width: 350px;
+    height: 200px;
+    background-color: aliceblue;
+    top: 50px;
+    position:absolute;
+    left: 240px;
+}
+
+
