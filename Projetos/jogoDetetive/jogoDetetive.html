@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&family=Roboto:ital@1&family=Special+Elite&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&family=Roboto:ital@1&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/layout.css">
@@ -22,6 +27,7 @@
 <body>
     <div class="conteudo">
         <h1>Jogo Detetive</h1>
+        <div class="tutors"><img src="./img/tutorialimg.png" alt="" onclick="diag4()"><p>Tutorial</p></div>
         <div class="suspeitos">
             <img src="./img/sus1.gif" alt="" class="p" ondblclick="diag1()" onclick="selec1()">
             <img src="./img/sus2.gif" alt="" class="p" ondblclick="diag2()" onclick="selec2()">
@@ -30,19 +36,37 @@
         <div class="bot">
             <button class="button" onclick="dica()">Dica</button>
             <button class="button" id="acs" onclick="acusar()">Acusar</button>
-            <button class="button" onclick="javascript:abrirJanela('./pop/investi.html', 400, 700);">Informações</button>
+            <button class="button"
+                onclick="javascript:abrirJanela('./pop/investi.html', 400, 700);">Informações</button>
         </div>
         <input type="text" id="saida" readonly>
         <input type="text" id="saidaf" readonly hidden>
         <a type="hiden" href="jogoDetetive.html" class="botf"><button class="button">Reiniciar</button></a>
         <div id="popup1" class="popup" onmouseleave="fechar()">
-            <img class="p" src="./img/sus1.gif" alt="" /><p class="diagsaida" id="diagsaida1"></p>
+            <img class="p" src="./img/sus1.gif" alt="" />
+            <div class="diagsaida">
+                <p class="panim" id="diagsaida1"></p>
+            </div>
+
         </div>
-        <div id="popup2" class="popup" onmouseleave="fechar()" >
-            <img class="p" src="./img/sus2.gif" alt="" /><p class="diagsaida" id="diagsaida2"></p>
+        <div id="popup2" class="popup" onmouseleave="fechar()">
+            <img class="p" src="./img/sus2.gif" alt="" />
+            <div class="diagsaida">
+                <p class="panim" id="diagsaida2"></p>
+            </div>
         </div>
         <div id="popup3" class="popup" onmouseleave="fechar()">
-            <img class="p" src="./img/sus3.gif" alt="" /><p class="diagsaida" id="diagsaida3"></p>
+            <img class="p" src="./img/sus3.gif" alt="" />
+            <div class="diagsaida">
+                <p  class="panim" id="diagsaida3"></p>
+            </div>
+        </div>
+        <div id="popup4" class="popup" onmouseleave="fechar()">
+            <img class="p" src="./img/detetive.gif" alt="" />
+            <div class="diagsaida">
+                <p class="ptutorial" id='diagsaida4'></p>
+            </div>
+            <button onclick="proximo()" class="button" id="proxim">Proximo</button>
         </div>
     </div>
     <section class="back"></section>

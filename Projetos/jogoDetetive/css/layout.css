@@ -19,6 +19,15 @@ h1::after {
     background-color: white;
     display: block;
 }
+.tutors img{
+    border-radius: 10%;
+    width: 50px;
+    height: 40px;
+    background-color: rgb(56, 50, 50);
+}
+.tutors p{
+    color: aliceblue;
+}
 
 .back {
     z-index: -1;
@@ -99,19 +108,45 @@ input {
     position: fixed;
     top: 200px;
     display: none;
-    width: 600px;
+    width: 65%;
     height: auto;
     border-radius: 20px;
     background-color:rgb(56, 56, 95);
 
 }
 .diagsaida{
-    width: 350px;
+    border-radius: 2%;
+    width: 60%;
     height: 200px;
     background-color: aliceblue;
     top: 50px;
     position:absolute;
-    left: 240px;
+    left: 240px;        
+}
+.panim{
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family:'Special Elite' ;
+    font-size: 1.2em;
+    animation:typing 6s 0.3s forwards ;
+}
+.ptutorial{
+    font-family:'Special Elite' ;
+    font-size: 1.2em;
+}
+#proxim{
+    position: absolute;
+    top: 80%;
+    left: 80%;
 }
 
+@keyframes typing{
+    from{
+        width:0;
+    }
+    to { 
+        width: 100%;
+    }
+}
 
