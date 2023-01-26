@@ -1,51 +1,53 @@
 .wrap {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .button {
-    min-width: 157px;
-    min-height: 30px;
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1.3px;
-    font-weight: 700;
-    color: #e6e6ee;
-    background: #08237c;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 157px;
+  min-height: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #e6e6ee;
+  background: #08237c;
   background: linear-gradient(90deg, rgb(10, 65, 138) 0%, rgb(5, 66, 158) 100%);
-    border: none;
-    border-radius: 500px;
-    box-shadow: 6px 6px 12px rgba(7, 57, 163, 0.64);
-    transition: all 0.3s ease-in-out 0s;
-    cursor: pointer;
-    outline: none;
-    position: relative;
-    padding: 5px;
-    }
-  
-  .button::before {
+  border: none;
+  border-radius: 500px;
+  box-shadow: 6px 6px 12px rgba(7, 57, 163, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 5px;
+}
+
+.button::before {
   content: '';
-    border-radius: 500px;
-    min-width: calc(150px + 6px);
-    min-height: calc(30px + 6px);
-    border: 6px solid #365bff;
-    box-shadow: 0 0 30px rgba(12, 28, 253, 0.64);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: all .3s ease-in-out 0s;
-  }
-  
-  .button:hover, .button:focus {
-    color: #f9f9fa;
-    transform: translateY(-6px);
-  }
-  
-  .button:hover::before, button:focus::before {
-    opacity: 1;
-  }
+  border-radius: 500px;
+  min-width: calc(150px + 6px);
+  min-height: calc(30px + 6px);
+  border: 6px solid #365bff;
+  box-shadow: 0 0 30px rgba(12, 28, 253, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+  color: #f9f9fa;
+  transform: translateY(-6px);
+}
+
+.button:hover::before,
+button:focus::before {
+  opacity: 1;
+}

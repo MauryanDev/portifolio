@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/menuajuda.css">
     <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +28,22 @@
 <body>
     <div class="conteudo">
         <h1>Jogo Detetive</h1>
-        <div class="tutors"><img src="./img/tutorialimg.png" alt="" onclick="diag4()"><p>Tutorial</p></div>
+        <div class="ajuda">
+            <ul class="menu">
+                <li>
+                    <p id="title">Ajuda</p>
+                    <ul>
+                        <div class="note">
+                            <img class="not" src="./img/not.png" onclick="note()" alt="">
+                            <p>Anotações</p>
+                        </div>
+                        <div class="tutors"><img src="./img/tutorialimg.png" alt="" onclick="diag4()">
+                            <p>Tutorial</p>
+                        </div>
+        </div>
+        </ul>
+        </li>
+        </ul>
         <div class="suspeitos">
             <img src="./img/sus1.gif" alt="" class="p" ondblclick="diag1()" onclick="selec1()">
             <img src="./img/sus2.gif" alt="" class="p" ondblclick="diag2()" onclick="selec2()">
@@ -58,7 +74,7 @@
         <div id="popup3" class="popup" onmouseleave="fechar()">
             <img class="p" src="./img/sus3.gif" alt="" />
             <div class="diagsaida">
-                <p  class="panim" id="diagsaida3"></p>
+                <p class="panim" id="diagsaida3"></p>
             </div>
         </div>
         <div id="popup4" class="popup" onmouseleave="fechar()">
@@ -68,8 +84,13 @@
             </div>
             <button onclick="proximo()" class="button" id="proxim">Proximo</button>
         </div>
-    </div>
-    <section class="back"></section>
+        <div id="popup5" class="popup" onmouseleave="fechar()">
+            <img class="p" src="./img/icon.png" alt="" />
+            <div class="diagsaida">
+                <p class="ptutorial" id='diagsaida5'></p>
+            </div>
+        </div>
+        <section class="back"></section>
 </body>
 
 </html>

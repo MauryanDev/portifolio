@@ -2,16 +2,19 @@
     margin: 0;
     padding: 0;
 }
+
 body {
-    font-family:'Josefin Sans';
+    font-family: 'Josefin Sans';
     display: grid;
     place-items: center;
     height: 100vh;
 }
-h1{
+
+h1 {
     color: azure;
-    height:50px;
+    height: 50px;
 }
+
 h1::after {
     content: "";
     width: auto;
@@ -19,13 +22,65 @@ h1::after {
     background-color: white;
     display: block;
 }
-.tutors img{
+
+.ajuda {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
     border-radius: 10%;
-    width: 50px;
-    height: 40px;
-    background-color: rgb(56, 50, 50);
+    padding: 0.2%;
+    width: 7%;
+    background: #08237c;
+    background: linear-gradient(90deg, rgb(6, 44, 94) 0%, rgb(4, 28, 65) 100%);
+    border: 2px solid rgba(7, 57, 163, 0.64);
+    box-shadow: 6px 6px 12px rgba(7, 57, 163, 0.64);
+
 }
-.tutors p{
+
+.ajuda #title {
+    color: aliceblue;
+    font-size: 2em;
+}
+
+.note {
+    margin: 10%;
+}
+
+.note p {
+    color: aliceblue;
+}
+
+.not {
+    border-radius: 10%;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(129, 124, 124);
+}
+
+.not:hover {
+    border: 2px solid white;
+
+}
+
+.tutors {
+    margin: 10%;
+}
+
+.tutors img {
+    border-radius: 10%;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(129, 124, 124);
+}
+
+.tutors img:hover {
+    border: 2px solid rgb(184, 184, 162);
+}
+
+.tutors p {
     color: aliceblue;
 }
 
@@ -75,9 +130,11 @@ h1::after {
     overflow: hidden;
     cursor: pointer;
     box-shadow: 6px 6px 12px rgba(5, 74, 114, 0.64);
-    border: 2px solid rgb(104, 156, 235);;
+    border: 2px solid rgb(104, 156, 235);
+    ;
 
 }
+
 .suspeitos:hover> :not(:hover) {
     filter: brightness(0.25);
 }
@@ -99,11 +156,12 @@ input {
     font-family: 'Josefin Sans';
     padding: 5px;
     width: 100%;
-    background:linear-gradient(90deg, rgb(222, 226, 231) 0%, rgb(104, 156, 235) 100%);
+    background: linear-gradient(90deg, rgb(222, 226, 231) 0%, rgb(104, 156, 235) 100%);
     border: 2px solid rgb(104, 156, 235);
     border-radius: 10px;
 }
-.popup{
+
+.popup {
     padding: 10px;
     position: fixed;
     top: 200px;
@@ -111,42 +169,46 @@ input {
     width: 65%;
     height: auto;
     border-radius: 20px;
-    background-color:rgb(56, 56, 95);
+    background-color: rgb(56, 56, 95);
 
 }
-.diagsaida{
+
+.diagsaida {
     border-radius: 2%;
-    width: 60%;
+    width: 65%;
     height: 200px;
     background-color: aliceblue;
     top: 50px;
-    position:absolute;
-    left: 240px;        
+    position: absolute;
+    left: 240px;
 }
-.panim{
+
+.panim {
     width: 0;
     white-space: nowrap;
     overflow: hidden;
-    font-family:'Special Elite' ;
+    font-family: 'Special Elite';
     font-size: 1.2em;
-    animation:typing 6s 0.3s forwards ;
+    animation: typing 6s 0.3s forwards;
 }
-.ptutorial{
-    font-family:'Special Elite' ;
+
+.ptutorial {
+    font-family: 'Special Elite';
     font-size: 1.2em;
 }
-#proxim{
+
+#proxim {
     position: absolute;
     top: 80%;
     left: 80%;
 }
 
-@keyframes typing{
-    from{
-        width:0;
+@keyframes typing {
+    from {
+        width: 0;
     }
-    to { 
+
+    to {
         width: 100%;
     }
 }
-

@@ -6,7 +6,7 @@
 body {
     font-family: 'Josefin Sans';
     display: flex;
-    height: 100vh;
+    height: 100%;
     justify-content: space-around;
 }
 
@@ -14,13 +14,14 @@ body h2 {
     color: #e6e6ee;
 
 }
-.modal p{
+
+.modal p {
     position: absolute;
     color: #e6e6ee;
-   width: 500px;
-   height: 100px;
-   left: 250px;
-   top: 100px;
+    width: 500px;
+    height: 100px;
+    left: 250px;
+    top: 100px;
 }
 
 body p {
@@ -109,6 +110,7 @@ body p {
     border-radius: 100%;
     left: 750px;
     bottom: 150px;
+    border: 5px solid red;
 
 }
 
@@ -123,6 +125,7 @@ body p {
     border-radius: 55%;
     left: 650px;
     bottom: 150px;
+    border: 5px solid red;
 
 }
 
@@ -137,6 +140,7 @@ body p {
     border-radius: 50%;
     left: 550px;
     bottom: 150px;
+    border: 5px solid red;
 
 }
 
@@ -232,7 +236,8 @@ button:focus::before {
     top: 110px;
     opacity: 0.95;
 }
-.anexo{
+
+.anexo {
     width: 40px;
     height: 30px;
 }

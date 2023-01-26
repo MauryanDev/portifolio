@@ -1,0 +1,18 @@
+/* submenu*/
+.menu li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    display: none;
+    border-radius: 10%;
+    background: linear-gradient(90deg, rgba(6, 44, 94, 0.7) 0%, rgba(4, 28, 65, 0.7) 100%);
+    border: 2px solid rgba(7, 57, 163, 0.64);
+    height: 150px;
+    width: 90px;
+    margin: 8px;
+}
+
+.menu li:hover ul,
+.menu li.over ul {
+    display: block;
+}

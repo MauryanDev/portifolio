@@ -16,11 +16,14 @@ function dica() {
         saida.value = 'Você só tem uma dica'
     }
 }
-function investigar() {
-    saidadg1.innerHTML =padrao[0]+"<br><br>"+invest1;
-    saidadg2.innerHTML =padrao[1]+"<br><br>"+invest2;
-    saidadg3.innerHTML =padrao[2]+"<br><br>"+invest3;
-    
+function restaurar() {
+    document.getElementById('anexo1').style.border = '5px solid green'
+    document.getElementById('anexo2').style.border = '5px solid green'
+    document.getElementById('anexo3').style.border = '5px solid green'
+    saidadg1.innerHTML = padrao[0] + "<br><br>" + invest1;
+    saidadg2.innerHTML = padrao[1] + "<br><br>" + invest2;
+    saidadg3.innerHTML = padrao[2] + "<br><br>" + invest3;
+
 }
 function selec1() {
     sus1 = suspeito1
@@ -38,7 +41,7 @@ function acusar() {
     if (assassino == sus1 || assassino == sus2 || assassino == sus3) {
         saida.style.display = 'none'
         saidaf.style.display = 'flex'
-        saidaf.value = "O Assasino foi preso (Pontuação:"+ponto+")"
+        saidaf.value = "O Assasino foi preso (Pontuação:" + ponto + ")"
     } else {
         saida.style.display = 'none'
         saidaf.style.display = 'flex'
@@ -51,6 +54,7 @@ function fechar() {
     document.getElementById('popup2').style.display = 'none'
     document.getElementById('popup3').style.display = 'none'
     document.getElementById('popup4').style.display = 'none'
+    document.getElementById('popup5').style.display = 'none'
 }
 function abrirJanela(pagina, largura, altura) {
     // Definindo centro da tela
