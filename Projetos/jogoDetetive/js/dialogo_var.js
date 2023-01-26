@@ -29,13 +29,13 @@ if (assassino == suspeito1) {
 }
 if (assassino == suspeito2) {
     pista2.push('')
-    diagl2.push('<br>Eu estava trabalhando, eu sou ajudante na loja ')
+    diagl2.push('<br>Edigar :Eu estava trabalhando, eu sou ajudante na loja ')
     anotacao.push('<br>Nota: O Assassinato occoreu Sexta feira 21h')
 
 }
 if (assassino == suspeito3) {
     pista3.push('')
-    diagl3.push('<br>Eu estava com minha mãe')
+    diagl3.push('<br>Carina :Eu estava com minha mãe')
     anotacao.push('<br>Nota:O Assassinato occoreu Sexta feira 21h ')
 
 }
