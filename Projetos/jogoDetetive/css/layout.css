@@ -32,7 +32,7 @@ h1::after {
     margin: 2%;
     border-radius: 10%;
     padding: 0.2%;
-    width: 7%;
+    width: auto;
     background: #08237c;
     background: linear-gradient(90deg, rgb(6, 44, 94) 0%, rgb(4, 28, 65) 100%);
     border: 2px solid rgba(7, 57, 163, 0.64);

@@ -49,6 +49,12 @@ function acusar() {
         acs.style.display = 'none'
     }
 }
+
+document.addEventListener("keypress", function (e) {
+    if (e.key === 'Enter') {
+        fechar();
+    }})
+
 function fechar() {
     document.getElementById('popup1').style.display = 'none'
     document.getElementById('popup2').style.display = 'none'
@@ -61,7 +67,7 @@ function abrirJanela(pagina, largura, altura) {
     var esquerda = (screen.width - largura) / 2;
     var topo = (screen.height - altura) / 2;
     // Abre a nova janela
-    minhaJanela = window.open(pagina, '', 'height=' + altura + ', width=' + largura + ', top=' + topo + ', left=' + esquerda);
+    minhaJanela = window.open(pagina, '', 'height=673px' + altura + ', width=940px' + largura + ', top=' + topo + ', left=' + esquerda);
 }
 
 
