@@ -51,9 +51,10 @@ const handleAddTask = () => {
 }
 
 function handleBack() {
+   if (localStorage.titulo) {
     tasksContainer.innerHTML = ''
     renov()
-    showValues()
+    showValues()}
     fechar()
 }
 function renov(){
