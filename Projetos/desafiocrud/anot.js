@@ -59,9 +59,6 @@ function handleBack() {
 function renov(){
     tituloo = JSON.parse(localStorage.getItem('titulo'))
     textoo = JSON.parse(localStorage.getItem('texto'))
-    if(tituloo.length==0){
-        return
-    }
     let indext = id
     if(test==1){ 
     tituloo.splice(indext, 1, inputElement.value)
