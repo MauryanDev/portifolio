@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./img/fvicon.png" type="image/x-icon">
+    <title>Anotações</title>
+    <link rel="stylesheet" href="anot.css">
+</head>
+
+<body>
+    <div class="tudo">
+    <div class="topo">
+        <h1 class="log">My<p>Notes</p></h1>
+        <input type="text" class="busca" placeholder="Search your notes">
+        <span id="novo" class="novo" onclick="abrir()"><img src="./img/plus.png" alt="">
+        </span>
+    </div>
+    <div class="aderess">
+    <span class="all">Notes<span id="cont"></span></span>
+    </div>
+    <div class="conteudo">
+    </div>
+</div>
+
+    <div id="popup" class="popup">
+        <input type="text" class="texto" placeholder="Titulo">
+        <span class="contador"></span>
+        <textarea class="textarea" name="" id="" cols="100%" rows="100%" placeholder="Escreva algo"></textarea>
+        <a class="button"><img src="./img/salvar.png" alt=""></a>
+        <a class="buttonn"><img src="./img/de-volta.png" alt=""></a>
+    </div>
+    <script src="https://kit.fontawesome.com/af2a313d0a.js" crossorigin="anonymous"></script>
+    <script src="./anot.js"></script>
+</body>
+
+</html>

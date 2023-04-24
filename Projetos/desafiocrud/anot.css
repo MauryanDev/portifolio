@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #000;
+    background-image: url('./img/kai-pilger-Ef6iL87-vOA-unsplash.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+
+.topo {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5%;
+}
+
+.log {
+    position: absolute;
+    margin: 2%;
+    color: white;
+    left: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.busca {
+    position: absolute;
+    border-radius: 50px;
+    width: 80%;
+    color: white;
+    border: none;
+    padding: 10px;
+    background-color: rgba(65, 63, 63, 0.9);
+    font-size: 17px;
+    top: 95px;
+}
+
+.busca:active {
+    color: rgb(255, 255, 255);
+}
+
+.busca:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.aderess {
+    position: absolute;
+    margin-left: 10%;
+    margin: 10%;
+    top: 110px;
+}
+
+.all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    border-radius: 45px;
+    border: 2px solid white;
+    padding: 8px;
+    font-size: 19px;
+}
+
+#cont {
+    position: relative;
+    margin-left: 10px;
+    background-color: rgba(80, 79, 79, 0.6);
+    ;
+    border: 0.5px solid rgba(223, 223, 223, 0.6);
+    ;
+    box-shadow: 0 15px 30px rgba(182, 178, 178, 0.6);
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 11px;
+}
+
+.novo {
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    margin: 3%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.novo img {
+    background-color: rgba(158, 156, 156, 0.6);
+    box-shadow: 0 10px 20px rgba(65, 63, 63, 0.4);
+    border-radius: 100%;
+    width: 50px;
+    height: 40px;
+}
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 55%;
+}
+
+.conteudo>div {
+    flex: 1 1 400px;
+    margin: 10px;
+}
+
+.previu {
+    position: relative;
+    box-shadow: 0 15px 30px rgba(136, 131, 131, 0.3);
+    border-radius: 30px;
+    max-width: 100%;
+    max-height: 500px;
+    color: white;
+    background-color: rgba(82, 80, 80, 0.4);
+    padding: 10px;
+}
+
+
+.previu h1 {
+    margin: 0 0 5px;
+    font-size: 25px;
+    width: 100%;
+    height: 65px;
+}
+
+.previu p {
+    position: absolute;
+    max-width: 240px;
+    font-size: 16px;
+    top: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+}
+
+.previu i {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+    padding: 5px;
+}
+
+.popup {
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
+    background-color: rgba(50, 50, 50, 0.7);
+    z-index: 3;
+}
+
+.popup img {
+    width: 40px;
+    height: 30px;
+}
+
+.popup input {
+    background-color: rgba(50, 50, 50, 0.9);
+    border: none;
+    color: #e0dada;
+    padding: 10px;
+    margin: 1%;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+.texto:active {
+    color: rgb(255, 255, 255);
+}
+
+.texto:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.textarea {
+    font-style: none;
+    background-color: rgba(50, 50, 50, 0.9);
+    border: none;
+    color: #e0dada;
+}
+
+.textarea:active {
+    color: rgb(255, 255, 255);
+}
+
+.textarea:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.popup textarea {
+    font-size: 17px;
+    width: 95%;
+    margin: 2%;
+    border-radius: 10px;
+
+}
+
+.button {
+    position: absolute;
+    right: 0;
+    margin: 1%;
+    cursor: pointer;
+}
+
+.button img {
+    padding: 2px;
+    width: 40px;
+    height: 30px;
+}
+
+.buttonn {
+    position: absolute;
+    right: 70px;
+    margin: 1%;
+    cursor: pointer;
+}
+
+.buttonn img {
+    padding: 2px;
+    width: 40px;
+    height: 30px;
+}
+
+::-webkit-input-placeholder {
+    font-size: 19px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #e0dada;
+}
+
+@media only screen and (min-width: 937px) {
+    .conteudo {
+        margin-top: 25%;
+    }
+
+    body {
+        background-image: url('./img/kai-pilger-Ef6iL87-vOA-unsplash.jpg');
+        background-size: none;
+        position: none;
+    }
+    .novo {
+        position: fixed;
+        height: 3vh;
+        margin: 3%;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .texto{
+        width:80%;
+    }
+    
+
+    .previu p {
+        max-width: 400px;
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+    }
+}
