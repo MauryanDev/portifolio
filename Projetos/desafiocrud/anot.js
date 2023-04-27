@@ -19,8 +19,28 @@ const handleAddTask = () => {
     const inputIsValid = validateInput();
 
     if (!inputIsValid) {
-        return fechar()
+
+        inputElement.onblur = function () {
+            inputElement.placeholder = "Precisa conter um Titulo";
+            inputElement.classList.add("error");
+        };
+        inputElement.onblur()
+        inputElement.onfocus = function () {
+            inputElement.placeholder = "Titulo";
+            inputElement.classList.remove("error");
+        };
+
+        return
     }
+
+    if (localStorage.titulo && test == 1) {
+        tasksContainer.innerHTML = ''
+        renov()
+        showValues()
+        fechar()
+        return
+    }
+
 
     const previuContainer = document.createElement("div")
     previuContainer.classList.add("previu")
@@ -29,8 +49,8 @@ const handleAddTask = () => {
     const taskContent = document.createElement("p")
     conteudo.innerText = inputElement.value;
     taskContent.innerText = textoarea.value;
-
     conteudo.addEventListener('click', () => editar(conteudo))
+
 
 
     const deleteItem = document.createElement('i');
@@ -51,22 +71,18 @@ const handleAddTask = () => {
 }
 
 function handleBack() {
-   if (localStorage.titulo) {
-    tasksContainer.innerHTML = ''
-    renov()
-    showValues()}
     fechar()
 }
-function renov(){
+function renov() {
     tituloo = JSON.parse(localStorage.getItem('titulo'))
     textoo = JSON.parse(localStorage.getItem('texto'))
     let indext = id
-    if(test==1){ 
-    tituloo.splice(indext, 1, inputElement.value)
-    textoo.splice(indext, 1, textoarea.value)
+    if (test == 1) {
+        tituloo.splice(indext, 1, inputElement.value)
+        textoo.splice(indext, 1, textoarea.value)
 
-    localStorage.titulo = JSON.stringify(tituloo);
-    localStorage.texto = JSON.stringify(textoo);
+        localStorage.titulo = JSON.stringify(tituloo);
+        localStorage.texto = JSON.stringify(textoo);
     }
 }
 
@@ -79,13 +95,13 @@ function mostraind(h1) {
 function editar(elemento) {
     const pai = elemento.parentNode;
     const array = pai.children;
-    const h1 =array[0].innerText
+    const h1 = array[0].innerText
 
     document.querySelector(".texto").value = array[0].innerText
     document.querySelector(".textarea").value = array[1].innerText
     mostraind(h1)
     abrir();
-    test=1
+    test = 1
 }
 
 function removerPai(elemento) {
@@ -101,6 +117,11 @@ function abrir() {
     document.getElementById('popup').style.display = 'flex';
 }
 function fechar() {
+    inputElement.onblur = function () {
+        inputElement.placeholder = "Titulo";
+    };
+    inputElement.onblur()
+    inputElement.classList.remove("error");
     document.getElementById('popup').style.display = 'none';
     document.querySelector(".texto").value = ''
     document.querySelector(".textarea").value = ''
