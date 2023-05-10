@@ -165,14 +165,16 @@ input:active {
     color: rgb(14, 14, 14);
 }
 
-.tel,
+.numero,
 .email,
 .nome {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
+.numeroinput{
+    text-decoration: none;
+}
 input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
@@ -198,4 +200,7 @@ input:focus {
     padding: 2px;
     width: 35px;
     height: 25px;
+}
+.error::placeholder{
+    color: red;
 }
