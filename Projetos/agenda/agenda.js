@@ -154,6 +154,10 @@ function editar(elemento) {
     document.querySelector(".emailinput").value = emailsVet[indemail];
     whatss(array[1].innerText)
     gmail(emailsVet[indemail])
+    
+     document.getElementById('linkwatss').style.display='flex';  
+     document.getElementById('linkemail').style.display='flex';  
+   
     mostraind(h1);
     abrir();
     test = 1;
@@ -190,6 +194,8 @@ function fechar() {
     email.classList.remove('error')
     document.getElementById('popup').style.display = 'none';
     document.getElementById('tudo').style.display = 'block';
+    document.getElementById('linkwatss').style.display='none';  
+    document.getElementById('linkemail').style.display='none';  
     document.querySelector(".nomeinput").value = '';
     document.querySelector(".numeroinput").value = '';
     document.querySelector(".emailinput").value = '';
