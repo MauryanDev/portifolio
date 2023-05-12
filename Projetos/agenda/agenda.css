@@ -175,7 +175,7 @@ input:active {
     flex-direction: row;
     align-items: center;
 }
-.numero a{
+.numero,.email, a{
     text-decoration: none;
 }
 .numeroinput{

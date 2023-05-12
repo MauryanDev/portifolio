@@ -153,6 +153,7 @@ function editar(elemento) {
     document.querySelector(".numeroinput").value = array[1].innerText;
     document.querySelector(".emailinput").value = emailsVet[indemail];
     whatss(array[1].innerText)
+    gmail(emailsVet[indemail])
     mostraind(h1);
     abrir();
     test = 1;
@@ -374,4 +375,9 @@ let numeroInter
 function whatss(numero){
      numeroInter = inteirosPositivos(numero)
     return numeroInter
+}
+/*email*/
+let emailinter
+function gmail(emailint){
+    emailinter = emailint
 }
