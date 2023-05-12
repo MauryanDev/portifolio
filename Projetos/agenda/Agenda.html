@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./agenda.css">
+    <title>Agenda</title>
+</head>
+
+<body>
+    <div class="tudo" id="tudo">
+        <div class="topo">
+            <h1 class="log">Meus<p>Contatos</p>
+            </h1>
+            <div class="buscar">
+                <i class="ph-duotone ph-magnifying-glass"></i><input type="text" class="busca" placeholder="Pesquisar">
+            </div>
+            <div class="aderess">
+                <span class="Ncontato">Contatos<span id="cont"></span></span>
+            </div>
+        </div>
+        <div class="contatos">
+        </div>
+        <span id="add" class="add" onclick="abrir()"><i class="ph ph-plus-circle" style="font-size: 40px;"></i></span>
+    </div>
+    <div id="popup" class="popup">
+        <div class="conteudo">
+            <h1>Contato</h1>
+            <img src="./img/imagem-do-usuario-com-fundo-preto.png" alt="">
+            <h3 id="nomec"></h3>
+            <p id="estado"></p>
+            <div class="botao">
+                <a class="buttonn"><img src="./img/de-volta.png" alt=""></a>
+                <a class="button"><img src="./img/salvar.png" alt=""></a>
+            </div>
+        </div>
+        <div class="popinput">
+            <div class="popinputconteudo">
+                <form action="">
+                    <div class="nome">
+                        <i class="ph-light ph-user" style="font-size: 30px;"></i><input class="nomeinput" type="text"
+                            placeholder="Nome" alt="Nome">
+                    </div>
+                    <div class="numero">
+                        <i class="ph-light ph-phone" style="font-size: 30px;"></i><input class="numeroinput" type="tel"
+                            placeholder="Ex:(DDD)Numero" alt="telefone"><a id="linkwatss" href='https://wa.me/'
+                            onclick="location.href=this.href+numeroInter;return false;"><i
+                                class="ph-light ph-whatsapp-logo"
+                                style="font-size: 33px;color: green;font-weight: 700;"></i></a>
+                    </div>
+                    <div class="email">
+                        <i class="ph-light ph-envelope" style="font-size: 30px;"></i><input class="emailinput"
+                            type="email" placeholder="Ex:silva@gmail.com" alt="email"><a id="linkemail"
+                            href="https://mail.google.com/mail/u/0/?tab=Cm#search/in%3Asent+"
+                            onclick="location.href=this.href+emailinter;return false;"><i class="ph-light ph-at" style="font-size: 30px;color: orangered;font-weight: 700;"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/af2a313d0a.js" crossorigin="anonymous"></script>
+    <script src="./dados.js"></script>
+    <script src="./agenda.js"></script>
+</body>
+
+</html>
