@@ -1,103 +1,119 @@
-
 var vtddd = [
     {
         nome: 'DistritoFederal',
-        numero: 61
+        numero: ['61'],
     },
     {
         nome: 'Goiás',
-        numero: (62,64)
+        numero: ['62', '64'],
     },
     {
         nome: 'Mato Grosso',
-        numero: (65,66)
+        numero: ['65', '66'],
     },
     {
         nome: 'Mato Grosso do Sul',
-        numero: (67)
+        numero: ['67'],
     },
     {
         nome: ' Alagoas',
-        numero: (82)
+        numero: ['82'],
     },
     {
         nome: 'Bahia',
-        numero: (71,73,74,75,77)
+        numero: ['71', '73', '74', '75', '77'],
     },
     {
         nome: 'Ceará',
-        numero: (85,88)
+        numero: ['85', '88'],
     },
     {
         nome: 'Maranhão',
-        numero: (98,99)
+        numero: ['98', '99']
     },
     {
         nome: 'Paraíba',
-        numero:  (83),
+        numero: ['83'],
+    },
+    {
+        nome: 'Pernambuco',
+        numero: ['81', '87'],
     },
     {
         nome: 'Ceará',
-        numero: (85, 88)
+        numero: ['85', '88'],
     },
     {
-        nome: 'Ceará',
-        numero: (85, 88)
+        nome: 'Rio Grande do Norte',
+        numero: ['84'],
     },
     {
-        nome: 'Ceará',
-        numero: (85, 88)
+        nome: 'Sergipe',
+        numero: ['79'],
     },
     {
-        nome: 'Ceará',
-        numero: (85, 88)
+        nome: 'Acre',
+        numero: ['68'],
     },
     {
-        nome: 'Ceará',
-        numero: (85, 88)
+        nome: 'Amapá',
+        numero: ['96'],
     },
     {
-        nome: 'Ceará',
-        numero: (85, 88)
+        nome: 'Amazonas',
+        numero: ['92', '97'],
     },
     {
-        nome: 'Ceará',
-        numero: (85, 88)
+        nome: 'Pará',
+        numero: ['91', '93', '94'],
+    },
+    {
+        nome: 'Rondônia',
+        numero: ['69'],
+    },
+    {
+        nome: 'Roraima',
+        numero: ['95'],
+    },
+    {
+        nome: 'Tocantins',
+        numero: ['63'],
+    },
+    {
+        nome: 'Espírito Santo',
+        numero: ['27', '28'],
+    },
+    {
+        nome: 'Minas Gerais',
+        numero: ['31', '32', '33', '34', '35', '37', '38'],
+    },
+    {
+        nome: 'Rio de Janeiro',
+        numero: ['21', '22', '24'],
+    },
+    {
+        nome: 'São Paulo',
+        numero: ['11', '12', '13', '14', '15', '16', '17', '18', '19'],
+    },
+    {
+        nome: 'Paraná',
+        numero: ['41', '42', '43', '44', '45', '46'],
+    },
+    {
+        nome: 'Rio Grande do Sul',
+        numero: ['51', '53', '54', '55'],
+    },
+    {
+        nome: 'Santa Catarina',
+        numero: ['47', '48', '49'],
+    },
+    {
+        nome: 'Piauí',
+        numero: ['86', '89'],
     },
     {
         nome: 'Minas Gerais ',
-        numero: (31, 32, 33, 34, 35, 37 ,38)
+        numero: ['31', '32', '33', '34', '35', '37', '38'],
     },
 ]
-export default vtddd;
 
-/*
-    
-   
-      
-   
-  
-   
-    
-    Pernambuco (81 e 87)
-    Piauí (86 e 89)
-    Rio Grande do Norte (84)
-     Sergipe (79)
-    
-     Acre (68)
-     Amapá (96)
-     Amazonas (92 e 97)
-     Pará (91, 93 e 94)
-     Rondônia (69)
-     Roraima (95)
-     Tocantins (63)
- 
-     Espírito Santo (27 e 28)
-     Minas Gerais (31, 32, 33, 34, 35, 37 e 38)
-     Rio de Janeiro (21, 22 e 24)
-     São Paulo (11, 12, 13, 14, 15, 16, 17, 18 e 19)
-    
-     Paraná (41, 42, 43, 44, 45 e 46)
-     Rio Grande do Sul (51, 53, 54 e 55)
-     Santa Catarina (47, 48 e 49)
-*/

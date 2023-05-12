@@ -6,10 +6,12 @@ const add = document.querySelector(".button");
 
 const pesquisar = document.querySelector('.busca');
 
+
+let ddd
 let id
 let test
 
-contador = document.getElementById('cont');
+const contador = document.getElementById('cont');
 
 var nomesVet = []
 var numerosVet = []
@@ -18,7 +20,7 @@ var emailsVet = []
 const contatosContainer = document.querySelector(".contatos");
 const validateInput = () => nome.value.trim().length > 0;
 
-const validateNumero = () =>tiraHifen(inteirosPositivos(numero.value)).trim().length === 11;
+const validateNumero = () => tiraHifen(inteirosPositivos(numero.value)).trim().length === 11;
 
 
 const handleAddTask = () => {
@@ -37,9 +39,9 @@ const handleAddTask = () => {
         };
         return
     }
-    if(!validNumero){
-        numero.value= ''
-        numero.onblur =  function () {
+    if (!validNumero || numero.value.length >14) {
+        numero.value = ''
+        numero.onblur = function () {
             numero.placeholder = "Deve conter 11 dígitos";
             numero.classList.add("error");
         };
@@ -50,9 +52,9 @@ const handleAddTask = () => {
         };
         return
     }
-    if(!validateEmail(email.value) && email.value.length > 0){
-        email.value=''
-        email.onblur= function () {
+    if (!validateEmail(email.value) && email.value.length > 0) {
+        email.value = ''
+        email.onblur = function () {
             email.placeholder = "Email invalido";
             email.classList.add("error");
 
@@ -141,13 +143,16 @@ function editar(elemento) {
     nomesVet = JSON.parse(localStorage.getItem('nomes'))
     emailsVet = JSON.parse(localStorage.getItem('emails'))
 
-    const em = nomesVet.indexOf(h1)
+
+    const indemail = nomesVet.indexOf(h1)
 
     document.getElementById('nomec').innerHTML = array[0].innerText;
+    document.getElementById('estado').innerHTML = estados(inteirosPositivos(array[1].innerText));
+    
     document.querySelector(".nomeinput").value = array[0].innerText;
     document.querySelector(".numeroinput").value = array[1].innerText;
-
-    document.querySelector(".emailinput").value = emailsVet[em];
+    document.querySelector(".emailinput").value = emailsVet[indemail];
+    whatss(array[1].innerText)
     mostraind(h1);
     abrir();
     test = 1;
@@ -187,7 +192,8 @@ function fechar() {
     document.querySelector(".nomeinput").value = '';
     document.querySelector(".numeroinput").value = '';
     document.querySelector(".emailinput").value = '';
-    document.getElementById('nomec').innerHTML = '';
+    document.getElementById('nomec').innerHTML = ''; 
+    document.getElementById('estado').innerHTML = ''; 
 }
 
 
@@ -330,24 +336,42 @@ function mostracont() {
 /*restrições*/
 function mask(numero) {
     let numeroAtual = numero
-    const parte0 = numeroAtual.slice(0,2);
-    const parte1 = numeroAtual.slice(2,7);
-    const parte2 = numeroAtual.slice(7,11);
+    const parte0 = numeroAtual.slice(0, 2);
+    const parte1 = numeroAtual.slice(2, 7);
+    const parte2 = numeroAtual.slice(7, 11);
     numeroAjustado = `(${parte0})${parte1}-${parte2}`
-        return numeroAjustado
+    return numeroAjustado
 }
 function tiraHifen(numero) {
     const numeroAtual = numero;
     const numeroAjustado0 = numeroAtual.replace(/\-/g, '');
     const numeroAjustado1 = numeroAjustado0.replace(/[{()}]/g, '');
-   return  numeroAjustado1
+    return numeroAjustado1
 }
 function inteirosPositivos(numero) {
-    numero = numero.replace(/[^0-9]/g, "") 
+    numero = numero.replace(/[^0-9]/g, "")
     return numero;
-} 
+}
 
 function validateEmail(email) {
     var re = /\S+@\S+\.\S+/;
     return re.test(email);
-  }
+}
+
+function estados(numero) {
+    let numeroAtual = numero
+    let ddd = numeroAtual.slice(0, 2);
+
+    let uf = vtddd.filter(vtddd => vtddd.numero.includes(ddd));
+    if (uf.length == 0) {
+        return document.getElementById('estado').innerHTML = `(${ddd})-Internacional`
+    }
+    return `(${ddd})-` + uf[0].nome
+}
+
+/* whatss*/
+let numeroInter
+function whatss(numero){
+     numeroInter = inteirosPositivos(numero)
+    return numeroInter
+}

@@ -49,17 +49,20 @@ body {
 .aderess {
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .Ncontato {
     color: rgb(19, 18, 18);
-    border-radius: 45px;
-    border: 1px solid rgb(19, 18, 18);
+    border-radius: 10px;
+    font-weight: 700;
+    border-bottom: 2px solid black;
     padding: 8px;
 }
 
 #cont {
     position: relative;
+    font-weight: 700;
     margin-left: 8px;
     background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0 15px 30px rgba(233, 231, 231, 0.6);
@@ -171,6 +174,9 @@ input:active {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.numero a{
+    text-decoration: none;
 }
 .numeroinput{
     text-decoration: none;
