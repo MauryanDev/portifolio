@@ -178,7 +178,9 @@ input:active {
 .numero,.email, a{
     text-decoration: none;
 }
-
+#linkemail,#linkwatss{
+    display: none;
+}
 .numeroinput{
     text-decoration: none;
 }
