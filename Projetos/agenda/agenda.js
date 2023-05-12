@@ -155,8 +155,9 @@ function editar(elemento) {
     whatss(array[1].innerText)
     gmail(emailsVet[indemail])
     
-     document.getElementById('linkwatss').style.display='flex';  
-     document.getElementById('linkemail').style.display='flex';  
+     document.getElementById('linkwatss').style.display='flex';
+    if(!emailinter==0){
+     document.getElementById('linkemail').style.display='flex';  }
    
     mostraind(h1);
     abrir();
