@@ -1,0 +1,109 @@
+.ph, .ph-bold {
+  font-size: 1rem;
+}
+
+header.page-header {
+  border-bottom: 1px solid var(--primary);
+}
+
+header.page-header nav {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+header.page-header nav > * {
+  flex: 1;
+}
+
+header.page-header nav .logo img {
+  width: 5.75rem;
+  height: 2.25rem;
+}
+
+header.page-header nav .navigation-menu {
+  display: flex;
+  justify-content: center;
+
+  list-style: none;
+}
+
+header.page-header nav .navigation-menu a {
+  color: var(--gray-lighter);
+}
+
+header.page-header nav .navigation-menu a:hover {
+  color: var(--white);
+}
+
+header.page-header nav .menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+header.page-header nav .menu .search-input {
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0 1rem 1rem;
+
+  border-radius: 6.25rem;
+  background: var(--primary);
+  color: var(--primary-darkest);
+  font-weight: 500;
+}
+
+header.page-header nav .menu .search-input input {
+  background-color: transparent;
+  color: var(--primary-darker);
+  border: none;
+  outline: none;
+}
+
+header.page-header nav .menu .search-input input::placeholder {
+  color: var(--primary-dark);
+  font-weight: 400;
+}
+
+header.page-header nav .menu .search-input input::selection {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+header.page-header nav .menu .search-input button {
+  all: unset;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+header.page-header nav .menu .search-input button:hover i {
+  color: var(--white);
+}
+
+header.page-header nav .menu .icon-button {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 6.25rem;
+  background: var(--primary);
+  color: var(--primary-darkest);
+  transition: all 150ms;
+}
+
+header.page-header nav .menu .search-button {
+
+}
+
+header.page-header nav .menu .icon-button:hover {
+  background-color: var(--primary-light);
+}

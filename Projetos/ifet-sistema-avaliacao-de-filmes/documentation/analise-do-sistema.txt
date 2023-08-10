@@ -1,0 +1,37 @@
+=====================================
+PÁGINA DE LOGIN
+
+- autenticação - classe Sistema
+	procurar um usuário
+=====================================
+PÁGINA DE CADASTRO	*procurar usuário*
+
+- cadastro - classe Sistema
+	procurar usuário
+=====================================
+PÁGINA INICIAL
+
+	// - melhores 5 filmes avaliados
+	(quantidade de avaliação)
+	// - buscar usuários
+
+- os 5 filmes mais avaliados
+- buscar filme
+=====================================
+PÁGINA DO FILME
+
+- exibir avaliações
+- criar avaliação
+=====================================
+PÁGINA DO USUÁRIO
+
+	// - mostrar usuários favoritos
+
+- alterar nome
+- alterar senha
+- mostrar avaliações
+=====================================
+
+
+pesquisou filme
+buscar no nosso banco de dados

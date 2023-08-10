@@ -1,0 +1,15 @@
+:root {
+  --primary-lightest: #a8fff5;
+  --primary-light: #7bfff0;
+  --primary: #0FDFC8;
+  --primary-dark: #104847;
+  --primary-darker: #112828;
+  --primary-darkest: #0F1219;
+
+  --warning: #d7e60b;
+
+  --white: #FFFFFF;
+  --white-50: rgba(255, 255, 255, 0.5);
+  --gray-lighter: #EBEBEB;
+  --gray-light: #A9A9A9;
+}

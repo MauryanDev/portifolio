@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.background-plane {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+}
+
+.background-plane img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 30%;
+}
+
+.background-plane div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--primary-darkest) 100%);
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 22rem;
+  margin: 0 auto;
+
+}
+
+.login-form input {
+  width: 21.875rem;
+  padding: 0.75rem;
+  border-radius: var(--rounded, 0.5rem);
+  background-color: transparent;
+  box-shadow: inset 0px 0px 0px 2px var(--gray-light);
+  outline: none;
+  border: none;
+  transition: box-shadow 150ms;
+  text-align: center;
+  color: var(--primary-lightest);
+  font-weight: 500;
+  /* color: transparent; */
+
+  transition: all 0.3s;
+}
+
+.login-form input::placeholder {
+  color: var(--gray-light);
+}
+
+.login-form input[type=password]:not(:placeholder-shown) {
+  letter-spacing: 7px;
+}
+
+.login-form input:focus {
+  box-shadow: inset 0px 0px 0px 2px var(--primary);
+  background-color: #13636170;
+}
+
+.login-form button {
+  width: 100%;
+}
+
+.text {
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-variant: all-small-caps;
+  }
+
+a{
+  text-decoration: underline; 
+}
+
+.logo-img {
+  position: relative;
+  width: 16rem;
+  height: 6rem;
+  top: 3rem;
+}

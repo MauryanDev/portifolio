@@ -1,0 +1,13 @@
+REFERÊNCIA DE INTERFACE
+https://dribbble.com/shots/10556530-Movie-TV-Film-Landing-Page-Design
+
+FIGMA
+https://www.figma.com/file/fSJOmvvQmowJgXQJKa3ziV/Untitled?type=design&node-id=4%3A18&mode=dev
+
+Página inicial - MAURYSAN
+  - lista dos 5 filmes mais avaliados
+  - caso não tenha filmes avaliados, mostrar os 5 filmes
+  - focar o primeiro filme da lista
+Página de resultado de busca - LUIZ EDUARDO
+Página de login - MAURÍLIO
+Página do filme - EDU
