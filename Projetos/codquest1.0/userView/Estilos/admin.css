@@ -1,0 +1,294 @@
+body {
+    display: flex;
+    align-items: center;
+    font-family: 'Press Start 2P';
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+
+.all {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+    background-image: url('../imagens/backadmin.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #000;
+    background: rgba(25, 30, 58, 0.80);
+}
+
+.log {
+    margin-left: 10px;
+}
+
+.adm {
+    margin-right: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #FFA12B;
+}
+
+.matter {
+   position: absolute;
+    width: 40%;
+    height: 85%;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: 3px solid #bbb3b35d;
+    background: rgba(45, 57, 86, 0.70);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.matter h1 {
+    margin-top: 5%;
+    margin-left: 6%;
+}
+
+.matter h2 {
+    margin-left: 10%;
+}
+
+.matter h3 {
+    margin-left: 15%
+}
+
+.matter h1:hover {
+    color: #FFA12B;
+    cursor: pointer;
+}
+
+.matter h2:hover {
+    color: #FFA12B;
+    cursor: pointer;
+}
+
+.matter h3:hover {
+    color: #FFA12B;
+    cursor: pointer;
+}
+
+.search {
+    position: absolute;
+    right: 1%;
+    top: 15%;
+    width: 35%;
+    height: 85%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(45, 57, 86, 0.70);
+}
+
+.searchperf {
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.search input {
+    margin-left: 5%;
+    width: 298px;
+    height: 34px;
+    border-radius: 10px;
+    background: #D9D9D9;
+}
+
+.you {
+    position: absolute;
+    display: block;
+    width: 289px;
+    height: 91px;
+    border: 1.477px solid #000;
+    background: rgba(25, 30, 58, 0.80);
+    box-shadow: 0px 1.96923px 1.96923px 0px rgba(0, 0, 0, 0.25);
+    bottom: 3.5%;
+    top: 27%;
+    right: 30%;
+}
+
+.you p {
+    margin-left: 3%;
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+   font-size: 12px;
+    flex-shrink: 0;
+}
+
+.you:hover {
+    color: #FFA12B;
+    cursor: pointer;
+}
+
+.you .person {
+    position: absolute;
+    display: flex;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    width: 72.369px;
+    height: 74.831px;
+    border: 3px solid #000;
+    background: #0E1422;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.you .person img {
+    width: 37.415px;
+    height: 51.2px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.alter {
+    position: absolute;
+    bottom: 0;
+    right: 4%;
+}
+.alter h2:hover{
+    color: #FFA12B;
+    cursor: pointer;
+}
+.del{
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+}
+.del:hover{
+    color: #FFA12B;
+    cursor: pointer;
+}
+
+#list {
+    list-style-type: none;
+    padding: 0;
+    display: block;
+    font-size: 14px;
+  }
+
+  #list li {
+    border: 3px solid #000;
+    background: #0E1422;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    margin-right    : 10%;
+  }
+
+#popup{
+    display: none;
+}
+  .back2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 50%;
+    height: 90%;
+    color: aliceblue;
+    border-radius: 10px;
+    background: rgba(26, 30, 57, 0.95);
+    flex-shrink: 0;
+
+}
+.back2 h2{
+    margin-top: 15%;
+}
+.back2 input {
+    border-radius: 5px;
+    width: 60%;
+    height: 5%;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    margin-top: 10%;
+}
+
+.button a {
+    color: white;
+    font-family: 'Press Start 2P';
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FFA12B;
+    display: block;
+    position: relative;
+    padding: 18px 5px;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.button a:active {
+    top: 10px;
+    background-color: #F78900;
+
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.button:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.foot{
+    position: absolute;
+    margin-top: 5%;
+      right: 1%;
+}
+.foot a {
+    color: whitesmoke;
+    font-size: small;
+}
+
+.foot a:hover {
+    color: #F78900;
+}
+

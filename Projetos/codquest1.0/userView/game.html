@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz em JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Estilos/game.css">
+
+</head>
+
+<body>
+    <div class="all">
+        <div class="top">
+            <a href="./index.html">
+                <h2 class="log">CodeQuest<img src="./imagens/Star 16.svg" alt="Star"></h2>
+            </a>
+            <a href="">
+                <h2>Matérias</h2>
+            </a>
+            <a id="link" class="login">
+                <h2 id="tag">Logar/Registrar</h2>
+            </a>
+        </div>
+        <div class="game" id="game">   
+            <div id="quiz-container">
+                <div id="question-container"></div>
+                <div id="options-container"></div>
+                <button id="next">Próxima Pergunta</button>
+                <p id="result"></p>
+            </div>
+        </div>
+
+    </div>
+    <script type="module" src="../userModel.js"></script>
+    <script type="module" src="../functionGames.js"></script>
+</body>
+
+</html>

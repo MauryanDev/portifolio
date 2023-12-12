@@ -1,0 +1,190 @@
+body {
+    display: flex;
+    align-items: center;
+    font-family: 'Press Start 2P';
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+
+.all {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+    background-image: url('../imagens/backhome.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #000;
+    background: #191E3A;
+}
+
+.log {
+    margin-left: 10px;
+}
+
+.login {
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 3%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #FFA12B;
+}
+
+.ex {
+    position: absolute;
+    width: 378px;
+    height: 214px;
+    right: 2%;
+    top: 12%;
+    border: 1px solid #000;
+    background: #191E3A;
+}
+
+.ex p {
+    margin-left: 4%;
+}
+
+.ex div {
+    display: flex;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.ex div img {
+    width: 51px;
+    height: 58px;
+}
+
+.you {
+    position: absolute;
+    display: block;
+    width: 572px;
+    height: 288px;
+    flex-shrink: 0;
+    border: 3px solid #000;
+    background: #191E3A;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    bottom: 3.5%;
+    left: 1%;
+}
+
+.you h2 {
+    text-align: center;
+}
+
+.you p {
+    margin-left: 5%;
+    font-size: 20px;
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+}
+
+.you .heart {
+    display: flex;
+    position: absolute;
+    right: 10%;
+    bottom: 25%;
+}
+
+.you .heart img {
+    width: 30px;
+    height: 30px;
+}
+
+.you p img {
+    width: 39px;
+    height: 37px;
+}
+
+.you .person {
+    position: absolute;
+    display: flex;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    width: 143px;
+    height: 168px;
+    border: 3px solid #000;
+    background: #0E1422;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.you .person img {
+    width: 74px;
+    height: 115px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.you p img {
+    border-radius: 10px;
+}
+
+.ranking {
+    position: absolute;
+    display: flex;
+    width: 685px;
+    height: 311px;
+    flex-shrink: 0;
+    border: 3px solid #000;
+    background: #4B4B93;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    right: 0;
+    bottom: 0;
+}
+
+.ranking div {
+    position: absolute;
+    display: block;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 93%;
+    height: 240px;
+    bottom: 0;
+    left: 3%;
+    border: 2px solid #000;
+    background: #191E3A;
+}
+
+.ranking h3 {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Press Start 2P';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ranking img {
+    width: 48px;
+    height: 51px;
+    flex-shrink: 0;
+    margin-left: 3%;
+}

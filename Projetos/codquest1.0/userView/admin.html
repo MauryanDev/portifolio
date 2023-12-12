@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Estilos/admin.css">
+
+</head>
+
+<body>
+    <div class="all">
+        <div class="top">
+            <a href="./index.html">
+                <h2 class="log">CodeQuest<img src="./imagens/Star 16.svg" alt="Star"></h2>
+            </a>
+            <a href="./game.html">
+                <h2>Matérias</h2>
+            </a>
+            <a href="./admin.html" class="adm">
+                <h2 id="buttonExit">Sair</h2>
+            </a>
+        </div>
+        <div class="matter">
+            <h1>Conteudos:</h1>
+            <h2>Front-end Web<img src="./imagens/Star 16.svg" alt="Star"></h2>
+            <h3>HTML<img id="starImg"  alt="Star"></h3>
+            <!-- <h3>JavaScript<img src="./imagens/Star 16.svg" alt="Star"></h3>
+            <h3>CSS<img src="./imagens/Star 16.svg" alt="Star"></h3> -->
+            <div class="del">
+            </div>
+            <div class="alter">
+                <h2 id="onOff">On/Off</h2>
+            </div>
+        </div>
+        <div class="search">
+            <div class="searchperf">
+                <h2>Pesquisar Perfil</h2>
+                <input type="text" id="search">
+                <ul id="list"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="popup">
+        <div class="back2">
+            <div class="foot">
+                <a id="exitEdit">Fechar</a>
+            </div>
+           <H1>Editar</H1>
+                <h2>Nome</h2>
+               <input type="text" id="nameInput">
+                <h2>Email</h2>
+                <h4 id="emailShow"></h1>
+            <div class="button" id="buttonEdit">
+                <a>Alterar</a>
+            </div>
+            <div class="button" id="buttonDel">
+                <a>Deletar</a>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="../userModel.js"></script>
+    <script type="module" src="../functionAdm.js"></script>
+</body>
+
+</html>
+<!-- <div class="you">
+    <p>Nome:ZéDosGames</p>
+    <div class="person">
+        <img src="./imagens/person.png" alt="personagem">
+    </div>
+
+</div> -->
