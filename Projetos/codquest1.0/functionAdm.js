@@ -108,11 +108,11 @@ function userPerfil() {
     if (userLog) {
         return
     } else {
-        window.location.href = '/userView/logar.html'
+        window.location.href = '../userView/logar.html'
     }
 }
 buttonExit.addEventListener('click', function () {
     sessionStorage.clear();
-    window.location.href = '/userView/logar.html'
+    window.location.href = '../userView/logar.html'
 })
 
