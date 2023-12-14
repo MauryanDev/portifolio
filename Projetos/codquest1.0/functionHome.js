@@ -38,7 +38,7 @@ function userPerfil() {
         if (userLog.email == admin) {
             tag.innerHTML = 'Admin'
             link.addEventListener('click', function () {
-                window.location.href = '/userView/admin.html'
+                window.location.href = '../userView/admin.html'
             })
         } else {
 
@@ -46,13 +46,13 @@ function userPerfil() {
             tag.innerHTML = 'Perfil'
             ptss.innerHTML = userLog.pts
             link.addEventListener('click', function () {
-                window.location.href = '/userView/perfil.html'
+                window.location.href = '../userView/perfil.html'
             })
         }
     } else {
         tag.innerHTML = 'Logar/Registrar'
         link.addEventListener('click', function () {
-            window.location.href = '/userView/logar.html'
+            window.location.href = '../userView/logar.html'
         })
     }
 
