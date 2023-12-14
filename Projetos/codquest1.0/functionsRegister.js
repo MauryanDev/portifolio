@@ -14,7 +14,7 @@ addButton.addEventListener('click',function(){
         addUser(nameInput.value,emailInput.value,passwordInput.value,0)
         clear()
         console.log('Este e-mail ainda não existe no banco de dados.');
-        window.location.href = '/userView/logar.html'
+        window.location.href = '../userView/logar.html'
       }else{
         alert('Preencha os campos')
       }
