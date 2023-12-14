@@ -19,11 +19,11 @@ function userPerfil() {
         pts.innerHTML=userLog.pts
         ptss.innerHTML=userLog.pts
     } else {
-        window.location.href = '/userView/logar.html'
+        window.location.href = '../userView/logar.html'
     }
 }
 
 buttonExit.addEventListener('click', function () {
     sessionStorage.clear();
-    window.location.href = '/userView/logar.html'
+    window.location.href = '../userView/logar.html'
 })
