@@ -10,9 +10,9 @@ logButton.addEventListener('click',function(){
         if (emailExists && emailExists.password == passwordInput.value){
             const user = {name:emailExists.name,email:emailExists.email,pts:emailExists.pts}
             saveSession(user)
-            window.location.href = '/userView/perfil.html'
+            window.location.href = '../userView/perfil.html'
             if(emailExists.email == admin){
-               window.location.href='/userView/admin.html'
+               window.location.href='../userView/admin.html'
             }
         }else{
             alert('Senha ou Email incorretos')
