@@ -9,37 +9,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Estilos/alert.css">
     <link rel="stylesheet" href="./Estilos/cadLog.css">
 
 
 </head>
 
 <body>
-
-    <form action="">
-        <div class="back1">
-            <div class="back2">
-
-                <label for="emailInput">
-                    <h2>Email</h2>
-                    <input type="email" id="emailInput">
-                </label>
-                <label for="passwordInput">
-                    <h2>Senha</h2>
-                    <input type="password" id="passwordInput">
-                </label>
-                <label for="nameInput">
-                    <h2>Nome</h2>
-                    <input type="text" id="nameInput"><br>
-                </label>
-                <div class="button" id="button"> <a href="#">Cadastrar</a></div>
-                <div class="foot">
-                    <a href="./logar.html">Logar</a>
-                </div>
+    <div class="back1">
+        <div class="back2">
+            <h2>Email</h2>
+            <input type="email" id="emailInput">
+            <h2>Senha</h2>
+            <input type="password" id="passwordInput">
+            <h2>Nome</h2>
+            <input type="text" id="nameInput"><br>
+            <div class="button" id="button"> <a href="#">Cadastrar</a></div>
+            <div class="foot">
+                <a href="./logar.html">Logar</a>
             </div>
         </div>
-    </form>
-    <script type="module" src="../userModel.js"></script>
+    </div>
+    <div id="customAlert" class="custom-alert">
+        <p id="alertText"></p>
+        <button id="closeAlert">OK</button>
+    </div>
     <script type="module" src="../functionsRegister.js"></script>
 </body>
 

@@ -11,17 +11,67 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 import { getDatabase, ref, child, get, set, update, remove, push } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"
 const db = getDatabase()
 const usuariosRef = ref(db, 'Users');
+const auth = getAuth();
+
+check()
+export function check() {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // console.log('Usuário autenticado:', user.uid);
+    } else {
+      console.log('Nenhum usuário autenticado.');
+    }
+  })
+};
+
 
 export let admin = 'admin@gmail.com'
 
 //Functions
 
-export function addUser(name, email, password, pts) {
-  push(ref(db, 'Users/'), {
-    name: name, email: email, password: password, pts: pts
-  })
+export async function addUser(name, email, password, pts) {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+
+    await push(ref(db, 'Users/'), {
+      uid: user.uid,
+      name: name,
+      email: email,
+      pts: pts
+    });
+  } catch (error) {
+    showAlert('Email Invalido')
+    console.error('Erro ao criar usuário:', error);
+    throw error;
+  }
+}
+export async function Login(email, senha) {
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, senha);
+    const user = userCredential.user;
+    console.log('Usuário logado:', user.uid);
+    return user;
+  } catch (error) {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.error('Erro ao fazer login:', errorCode, errorMessage);
+    return null;
+  }
+}
+export function logout() {
+  signOut(auth)
+    .then(() => {
+      // Logout bem-sucedido
+      console.log('Usuário deslogado');
+    })
+    .catch((error) => {
+      // Tratar erros de logout
+      console.error('Erro ao deslogar:', error);
+    });
 }
 
 
@@ -32,6 +82,8 @@ export function getUser() {
         const database = Object.values(snapshot.val());
         resolve(database);
       } else {
+        const database = []
+        resolve(database)
         console.log("No data available");
         reject("No data available");
       }
@@ -51,9 +103,9 @@ export function getID(email) {
             const usuario = childSnapshot.val();
             if (usuario.email === email) {
               const usuarioID = childSnapshot.key;
-              const usuarioRef = ref(db, `Users/${usuarioID}`);
+              const userRef = ref(db, `Users/${usuarioID}`)
               console.log("ID do usuário com o email", email, "é:", usuarioID);
-              resolve(usuarioRef)
+              resolve(userRef)
             }
           })
         } else {
@@ -82,6 +134,7 @@ export async function getUserByName(name) {
 export async function getUsersPts() {
   return await getUser().then((database) => {
     const userOrderly = database.sort((a, b) => b.pts - a.pts);
+    console.log(userOrderly)
     return userOrderly
   })
 }
@@ -90,14 +143,33 @@ export async function getUsersPts() {
 
 export function Update(email, novosDados) {
   getID(email).then((usuarioRef) => {
-    set(usuarioRef, novosDados)
+    update(usuarioRef, novosDados)
   })
 }
 
 
-export function Remove(email) {
-  getID(email).then((usuarioRef) => {
-    remove(usuarioRef)
+export async function Remove(email) {
+  try {
+    const uid = await getID(email)
+
+    await remove(uidref);
+
+    console.log(`Usuário com UID ${uid} deletado com sucesso.`);
+  } catch (error) {
+    console.error('Erro ao deletar usuário:', error);
+  }
+}
+
+
+
+export function showAlert(texto) {
+
+  document.getElementById('alertText').innerHTML = texto;
+
+  document.getElementById('customAlert').style.display = 'block';
+  const closeAlert = document.getElementById('closeAlert')
+  closeAlert.addEventListener('click', function () {
+    document.getElementById('customAlert').style.display = 'none'
   })
 }
 

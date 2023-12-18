@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #question-container {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #options-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="question-container"></div>
+<div id="options-container"></div>
+<input type="text" id="answer-input" placeholder="Sua Resposta">
+<button onclick="checkAnswer()">Verificar Resposta</button>
+<div id="result"></div>
+
+<script>
+    const questions = [
+        {
+            question: "Quem é o criador do JavaScript?",
+            options: ["Bill Gates", "Mark Zuckerberg", "Brendan Eich", "Jeff Bezos"],
+            correctAnswer: "Brendan Eich"
+        },
+        {
+            question: "O que significa HTML?",
+            options: ["Hyper Text Markup Language", "High Tech Machine Learning", "Hyper Transfer Markup Language", "Home Tool Markup Language"],
+            correctAnswer: "Hyper Text Markup Language"
+        },
+        {
+            question: "Qual é a tag básica para criar um parágrafo em HTML?",
+            options: ["p", "h1", "br", "div"],
+            correctAnswer: "p"
+        }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function loadQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+
+        document.getElementById("question-container").innerHTML = currentQuestion.question;
+
+        const optionsContainer = document.getElementById("options-container");
+        optionsContainer.innerHTML = "";
+
+        currentQuestion.options.forEach((option, index) => {
+            const input = document.createElement("input");
+            input.type = "radio";
+            input.name = "answer";
+            input.value = option;
+            optionsContainer.appendChild(input);
+
+            const label = document.createElement("label");
+            label.innerHTML = option;
+            optionsContainer.appendChild(label);
+        });
+    }
+
+    function checkAnswer() {
+        const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+        if (selectedAnswer) {
+            const userAnswer = selectedAnswer.value;
+            const currentQuestion = questions[currentQuestionIndex];
+
+            if (userAnswer === currentQuestion.correctAnswer) {
+                score += 10;
+            }
+
+            document.getElementById("result").innerHTML = `Pontuação Atual: ${score}`;
+            selectedAnswer.checked = false;
+
+            nextQuestion();
+        } else {
+            alert("Selecione uma resposta antes de verificar.");
+        }
+    }
+
+    function nextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            loadQuestion();
+        } else {
+            document.getElementById("question-container").innerHTML = "Quiz Concluído!";
+            document.getElementById("options-container").innerHTML = "";
+            document.getElementById("result").innerHTML = `Pontuação Final: ${score} de ${(questions.length) * 10}`;
+        }
+    }
+
+    // Carrega a primeira pergunta ao iniciar o jogo
+    loadQuestion();
+</script>
+
+</body>
+</html>

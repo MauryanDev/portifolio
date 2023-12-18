@@ -7,19 +7,25 @@ body {
     color: white;
 }
 
-
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../imagens/g13b.gif');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    filter: brightness(50%);
+}
 .all {
     display: block;
     width: 100%;
     height: 100vh;
     flex-shrink: 0;
-    background-image: url('../imagens/fundogame.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
 }
 
 .top {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,6 +56,7 @@ a:hover {
 }
 
 .game {
+    margin-top:5%;
     font-family: 'Arial', sans-serif;
     height: 90%;
     text-align: center;
@@ -62,31 +69,120 @@ a:hover {
 
 
 #quiz-container {
-    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
+    padding: 50px;
+    max-width: 70%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    border: none;
+    background: #111;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px; 
 }
 
 #question-container {
-    margin-bottom: 20px;
+    margin-bottom: 10%;
     font-size: 18px;
-    color: #333;
+    font-family: 'Press Start 2P';
+    color: #fcf8f8;
 }
 
 #options-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: flex;
+    gap: 10px;
     align-items: center;
 }
 
-.option {
-   margin-bottom: 10px;
+.quiz::before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #0a0a0a, #260974, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
 }
-#next{
+
+.quiz:active {
+    color: #000
+}
+.quiz:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../imagens/g13b.gif');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+ @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 20% 0; }
+    100% { background-position: 0 0; }
+} 
+
+.option,#next {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1em 1em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  .option:hover, .option:focus,#next:hover,#next:focus {
+    color: #fff;
+    outline: 0;
+  }
+  
+  .option,#next {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    background-color: #000;
+  }
+  .option:hover,#next:hover {
+    box-shadow: 0 0 40px 40px #e74c3c inset;
+  }
+#next {
+    margin-top: 10%;
     visibility: visible;
 }
 

@@ -13,7 +13,7 @@ body {
     width: 100%;
     height: 100vh;
     flex-shrink: 0;
-    background-image: url('../imagens/backperf.jpg');
+    background-image: url('../imagens/YAxg.gif');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -90,6 +90,7 @@ a:hover {
     bottom: 3.5%;
     top: 15%;
     right: 2%;
+    border-radius: 2%;
 }
 
 .you h2 {
@@ -134,6 +135,7 @@ a:hover {
     border: 3px solid #000;
     background: #0E1422;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5%;
 
 }
 
@@ -145,4 +147,7 @@ a:hover {
 
 .you p img {
     border-radius: 10px;
+}
+#exit{
+    cursor: pointer;
 }

@@ -8,11 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Estilos/alert.css">
     <link rel="stylesheet" href="./Estilos/game.css">
 
 </head>
 
 <body>
+    <div class="back"></div>
     <div class="all">
         <div class="top">
             <a href="./index.html">
@@ -26,16 +28,19 @@
             </a>
         </div>
         <div class="game" id="game">   
-            <div id="quiz-container">
+            <div id="quiz-container" class="quiz">
                 <div id="question-container"></div>
                 <div id="options-container"></div>
-                <button id="next">Próxima Pergunta</button>
+                <button id="next" >Próxima Pergunta</button>
                 <p id="result"></p>
             </div>
         </div>
 
     </div>
-    <script type="module" src="../userModel.js"></script>
+    <div id="customAlert" class="custom-alert">
+        <p id="alertText"></p>
+        <button id="closeAlert">OK</button>
+    </div>
     <script type="module" src="../functionGames.js"></script>
 </body>
 

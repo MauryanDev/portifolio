@@ -1,4 +1,4 @@
-import { Update, getUserByEmail, admin } from "./userModel.js";
+import { Update, getUserByEmail, admin,showAlert } from "./userModel.js";
 
 
 let buttonNext = document.getElementById('next')
@@ -44,10 +44,10 @@ function chave() {
                 console.log(userLog.pts)
                 document.getElementById('game').style.display = 'flex'
             } else {
-                alert('Você Já jogou')
+                showAlert('Você Já jogou')
             }
         } else {
-            alert('O Jogo Foi Suspenso Por um ADMIN')
+            showAlert('O Jogo Foi Suspenso Por um ADMIN')
         }
     })
 
@@ -67,7 +67,17 @@ const questions = [
         question: "Qual atributo HTML é usado para definir o texto alternativo para uma imagem?",
         options: ["src", "alt", "title", "href"],
         correctAnswer: "alt"
-    }
+    },
+    {
+        question: "Qual linguagem de programação é conhecida como 'linguagem dos web browsers'?",
+        options: ["JavaScript", "Python", "Java", "C++"],
+        correctAnswer: "JavaScript"
+      },
+      {
+        question: "O que CSS representa em programação web?",
+        options: ["Central Style Sheet", "Cascading Style Sheet", "Computer Style Sheet", "Creative Style Sheet"],
+        correctAnswer: "Cascading Style Sheet"
+      },
 ];
 
 let currentQuestionIndex = 0;
@@ -99,11 +109,18 @@ function checkAnswer(selectedOption, correctAnswer) {
     resultElement.innerHTML = `Pontuação Atual: ${score}`;
 
     const optionButtons = document.querySelectorAll(".option");
-    optionButtons.forEach(button => button.setAttribute("disabled", true));
+    optionButtons.forEach(button => button.setAttribute("style","background-color:gray;" ));
+       optionButtons.forEach(button => button.setAttribute("disabled", true));
 }
+
+
+  
+  
+
 
 function nextQuestion() {
     const optionButtons = document.querySelectorAll(".option");
+    optionButtons.forEach(button => button.removeAttribute("style","background-color:gray;"));
     optionButtons.forEach(button => button.removeAttribute("disabled"));
 
     currentQuestionIndex++;
@@ -128,7 +145,7 @@ function addpoints() {
     getUserByEmail(userLog.email)
         .then((emailExists) => {
             if (emailExists.email != admin) {
-                let emailExistset = { name: emailExists.name, email: emailExists.email, password: emailExists.password, pts: score }
+                let emailExistset = {pts: score }
                 const user = { name: emailExists.name, email: emailExists.email, pts: score }
                 Update(userLog.email, emailExistset)
                 saveSession(user)

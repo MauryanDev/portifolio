@@ -1,4 +1,4 @@
-import { getUserByEmail, getUserByName, addUser, Update, Remove, admin } from "./userModel.js"
+import { getUserByEmail, getUserByName, addUser, Update,Remove, admin,logout} from "./userModel.js"
 let search = document.getElementById('search');
 let listUsers = document.getElementById('list');
 let exitEdit = document.getElementById('exitEdit');
@@ -53,15 +53,11 @@ search.addEventListener('input', function () {
 })
 
 buttonEdit.addEventListener('click', function () {
-    getUserByEmail(emailShow.innerHTML)
-        .then((emailExists) => {
-            let emailExistset = { name: nameInput.value, email: emailExists.email, password: emailExists.password, pts: emailExists.pts }
+            let emailExistset = {name: nameInput.value}
             Update(emailShow.innerHTML, emailExistset)
             document.getElementById('popup').style.display = 'none'
             listUsers.innerHTML = ''
             search.value = ''
-        })
-
 })
 buttonDel.addEventListener('click', function () {
     Remove(emailShow.innerHTML)
@@ -74,11 +70,11 @@ chave.addEventListener('click', function(){
     getUserByEmail(admin)
     .then((emailExists) => {
         if (emailExists.chave == 'on') {
-            let emailExistset = { name: nameInput.value, email: emailExists.email, password: emailExists.password, chave: 'off' }
+            let emailExistset = {chave: 'off' }
             Update(admin, emailExistset)
             starImg.src = "./imagens/Star 18.png";
         } else {
-            let emailExistset = { name: nameInput.value, email: emailExists.email, password: emailExists.password, chave: 'on' }
+            let emailExistset = {chave: 'on' }
             Update(admin, emailExistset)
             starImg.src = "./imagens/Star 16.svg";
         }
@@ -112,6 +108,7 @@ function userPerfil() {
     }
 }
 buttonExit.addEventListener('click', function () {
+    logout()
     sessionStorage.clear();
     window.location.href = '../userView/logar.html'
 })

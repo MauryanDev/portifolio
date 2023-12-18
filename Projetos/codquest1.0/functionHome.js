@@ -15,12 +15,25 @@ async function rank() {
     let rank = await getUsersPts()
     rank.shift()
     console.log(rank)
-    rank1Name.innerHTML = rank[0].name
-    rank2Name.innerHTML = rank[1].name
-    rank3Name.innerHTML = rank[2].name
-    rank1Pts.innerHTML = rank[0].pts
-    rank2Pts.innerHTML = rank[1].pts
-    rank3Pts.innerHTML = rank[2].pts
+    if(rank.length >= 1){
+        rank1Name.innerHTML = rank[0].name
+        rank1Pts.innerHTML = rank[0].pts
+        if(rank.length >= 2){
+            rank2Name.innerHTML = rank[1].name
+            rank2Pts.innerHTML = rank[1].pts
+        }
+        if(rank.length >= 3){
+            rank3Name.innerHTML = rank[2].name
+            rank3Pts.innerHTML = rank[2].pts
+        }
+
+    }
+    
+    // rank2Name.innerHTML = rank[1].name
+    // rank3Name.innerHTML = rank[2].name
+    
+    // rank2Pts.innerHTML = rank[1].pts
+    // rank3Pts.innerHTML = rank[2].pts
 }
 
 

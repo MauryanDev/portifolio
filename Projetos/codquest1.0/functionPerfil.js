@@ -1,3 +1,4 @@
+import { check,logout} from "./userModel.js"
 let nameUser = document.getElementById('nameUser')
 let buttonPerfil = document.getElementById('perfil')
 let buttonExit = document.getElementById('exit')
@@ -10,6 +11,7 @@ function obterInformacoesUsuario() {
     return usuario;
 }
 
+check()
 
 let userLog = obterInformacoesUsuario()
 userPerfil()
@@ -24,6 +26,7 @@ function userPerfil() {
 }
 
 buttonExit.addEventListener('click', function () {
+    logout()
     sessionStorage.clear();
     window.location.href = '../userView/logar.html'
 })
