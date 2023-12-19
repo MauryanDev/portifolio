@@ -152,7 +152,7 @@ export async function Remove(email) {
   try {
     const uid = await getID(email)
 
-    await remove(uidref);
+    await remove(uid);
 
     console.log(`Usuário com UID ${uid} deletado com sucesso.`);
   } catch (error) {
