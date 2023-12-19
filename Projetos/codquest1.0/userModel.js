@@ -65,11 +65,9 @@ export async function Login(email, senha) {
 export function logout() {
   signOut(auth)
     .then(() => {
-      // Logout bem-sucedido
       console.log('Usuário deslogado');
     })
     .catch((error) => {
-      // Tratar erros de logout
       console.error('Erro ao deslogar:', error);
     });
 }
@@ -150,11 +148,11 @@ export function Update(email, novosDados) {
 
 export async function Remove(email) {
   try {
-    const uid = await getID(email)
+    const uidref = await getID(email)
 
-    await remove(uid);
+    await remove(uidref);
 
-    console.log(`Usuário com UID ${uid} deletado com sucesso.`);
+    console.log(`Usuário com UID ${uidref} deletado com sucesso.`);
   } catch (error) {
     console.error('Erro ao deletar usuário:', error);
   }

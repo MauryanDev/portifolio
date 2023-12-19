@@ -35,7 +35,7 @@ function userPerfil() {
 
 }
 chave()
-//game
+
 function chave() {
     getUserByEmail(admin).then((emailExists) => {
         if (emailExists.chave == 'on') {
@@ -52,6 +52,7 @@ function chave() {
     })
 
 }
+//game
 const questions = [
     {
         question: "O que significa HTML?",
@@ -130,7 +131,10 @@ function nextQuestion() {
         document.getElementById("question-container").innerHTML = "Quiz Concluído!";
         document.getElementById("options-container").innerHTML = "";
         document.getElementById("result").innerHTML = `Pontuação Final: ${score} de ${(questions.length)*10}`;
-        buttonNext.style.visibility = 'hidden'
+        buttonNext.innerHTML='Próximo Jogo'
+        buttonNext.addEventListener('click',function(){
+            window.location.href = '../userView/game2.html'
+        })
         addpoints()
 
 
@@ -149,6 +153,7 @@ function addpoints() {
                 const user = { name: emailExists.name, email: emailExists.email, pts: score }
                 Update(userLog.email, emailExistset)
                 saveSession(user)
+                
             } else {
                 return
             }

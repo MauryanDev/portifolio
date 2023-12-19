@@ -11,11 +11,14 @@ addButton.addEventListener('click', async function () {
 
     if (!emailExists) {
       if (emailInput.value !== '' && passwordInput.value !== '') {
+        if(passwordInput.value.length > 6 ){
         await addUser(nameInput.value, emailInput.value, passwordInput.value, 0);
         console.log('Este e-mail ainda não existe no banco de dados.');
         clear();
         logout()
-        window.location.href = '../userView/logar.html';
+        window.location.href = '../userView/logar.html';}else{
+          showAlert('Senha minimo 7 caracteres')
+        }
       } else {
         showAlert('Preencha os campos');
       }
