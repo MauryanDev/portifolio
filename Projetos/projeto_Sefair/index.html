@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sefair & Nascimento - Landing Page</title>
+  <link rel="shortcut icon" href="/assets/Imag/logofivpro.png" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+</head>
+
+<body>
+  <nav class="navbar" id="main-nav">
+    <div class="container">
+      <img src="/assets/Imag/logo.png" alt="" href="#" class="navbar-logo">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <div class="navbar-links" id="navbar-links">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#sobre" class="nav-link">Sobre Nós</a>
+        <a href="#servicos" class="nav-link">Áreas de Atuação</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section" id="inicio">
+    <div class="container">
+
+      <div class="hero-content">
+
+        <h1>Soluções <strong>Jurídicas</strong> Estratégicas com <strong>Excelência e Personalização.</strong></h1>
+        <p>
+          Orientação especializada em Direito Empresarial, Tributário, Cível, Trabalhista e muito mais, servimos todo o
+          Brasil com compromisso, agilidade e foco nos seus resultados.
+        </p>
+      </div>
+
+      <div class="form-container">
+        <img src="/assets/Imag/logo.png" alt="" href="#" class="form-logo">
+        <h2>Receba a Melhor Orientação Juridica.</h2>
+        <form action="#">
+          <div class="form-group">
+            <input type="text" name="nome" placeholder="Nome Completo" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="E-mail" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" name="whatsapp" placeholder="Número de Whatsapp" required>
+          </div>
+          <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+      </div>
+
+    </div>
+  </header>
+  <section class="about-section" id="sobre">
+    <div class="container">
+
+      <div class="carousel-wrapper">
+        <div class="carousel-container">
+          <div class="carousel-slides" id="carouselSlides">
+            <div class="carousel-slide" style="background-image: url('/assets/Imag/1.jpg')"></div>
+            <div class="carousel-slide" style="background-image: url('/assets/Imag/2.jpg')"></div>
+            <div class="carousel-slide" style="background-image: url('/assets/Imag/3.jpg')"></div>
+            <div class="carousel-slide" style="background-image: url('/assets/Imag/4.jpg')"></div>
+          </div>
+          <button class="carousel-nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="carousel-nav-btn next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <h2>Quem é</h2>
+        <h3>SEFAIR & NASCIMENTO ADVOGADOS</h3>
+        <p>
+          A Sefair & Nascimento Advogados é um escritório comprometido com a excelência jurídica, liderado por Sérgio
+          Sefair e Katarina Nascimento
+        </p>
+        <p>
+          <strong>Sérgio Sefair </strong> mais de 28 anos de experiência em advocacia especializada em Direito
+          Empresarial e Tributário. Bacharel, pós-graduado, atuante também em cursos de liderança, empreendedorismo, com
+          publicações, palestras, e envolvimento em organizações relevantes.
+        </p>
+        <p>
+          <strong>Katarina Nascimento </strong> com 24 anos de experiência, especialização em Direito Tributário,
+          pós-graduação em Direito Empresarial, mestre (LL.M.) em Direito Corporativo, participação intensa em cursos
+          complementares.
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <section class="services-section" id="servicos">
+    <div class="container">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-subtitle">
+        Na Sefair & Nascimento Advogados, atuamos de forma estratégica e multidisciplinar para oferecer soluções
+        jurídicas completas e personalizadas. Conheça nossas principais áreas de atuação:
+      </p>
+
+      <div class="services-carousel-container">
+        <div class="services-carousel-slides" id="servicesCarouselSlides">
+          <div class="service-card">
+            <h3 class="card-title">Direito Tributário</h3>
+            <p class="card-description">
+              Planejamento e consultoria para redução de carga tributária, defesa em processos administrativos e
+              judiciais, e recuperação de créditos tributários.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Direito Societário</h3>
+            <p class="card-description">
+              Constituição, reorganização e estruturação de empresas, elaboração de contratos sociais, acordos de sócios
+              e assessoria em governança corporativa.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Direito Civil</h3>
+            <p class="card-description">
+              Atuação em contratos, responsabilidade civil, cobranças, indenizações e questões envolvendo direito de
+              propriedade e obrigações.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Direito Trabalhista Empresarial</h3>
+            <p class="card-description">
+              Assessoria preventiva e contenciosa em relações de trabalho, defesa em reclamações trabalhistas e
+              adequação às normas da legislação vigente.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Direito Administrativo</h3>
+            <p class="card-description">
+              Defesa e acompanhamento em processos licitatórios, contratos públicos e sanções administrativas, além de
+              consultoria a empresas que contratam com o poder público.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Direito Previdenciário</h3>
+            <p class="card-description">
+              Consultoria e contencioso voltados à concessão e revisão de benefícios previdenciários, tanto no âmbito
+              administrativo quanto judicial.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Direito Médico</h3>
+            <p class="card-description">
+              Defesa e orientação a profissionais e instituições de saúde em questões éticas, contratuais e
+              indenizatórias decorrentes da prática médica.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Administração de Passivos</h3>
+            <p class="card-description">
+              Análise e reestruturação de dívidas (Bancário / Tributário / Fornecedores), negociações com credores e
+              estratégias para reduzir riscos e preservar a saúde financeira.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Contratos e Franquias (Franchising)</h3>
+            <p class="card-description">
+              Elaboração, revisão e negociação de contratos empresariais e de franquia, assegurando segurança jurídica e
+              equilíbrio nas relações comerciais.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Direito Bancário</h3>
+            <p class="card-description">
+              Atuação em defesa de empresas e pessoas físicas em litígios bancários, revisão de contratos e orientação
+              sobre práticas financeiras.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Direito do Consumidor Empresarial</h3>
+            <p class="card-description">
+              Assessoria a empresas na prevenção e defesa em demandas consumeristas, com foco em conformidade, gestão de
+              risco e imagem institucional.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3 class="card-title">Responsabilidade Civil</h3>
+            <p class="card-description">
+              Representação em casos de danos materiais, morais e à imagem, buscando soluções eficazes e reparações
+              justas para nossos clientes.
+            </p>
+          </div>
+        </div>
+        <button class="carousel-nav-btn prev" onclick="changeServiceSlide(-2)">&#10094;</button>
+        <button class="carousel-nav-btn next" onclick="changeServiceSlide(2)">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+<script src="/assets/js/main.js"></script>
+
+</html>
