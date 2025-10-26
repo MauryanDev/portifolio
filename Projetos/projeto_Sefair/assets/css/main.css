@@ -2,7 +2,7 @@
       :root {
           --cor-fundo: #0a0c1a;
           /* Azul bem escuro, quase preto */
-          --cor-dourado: #D4AF37;
+          --cor-dourado: #cba776;
           /* Tom de dourado clássico */
           --cor-texto: #f0f0f0;
           /* Texto claro (branco-acinzentado) */
@@ -18,10 +18,26 @@
           --cor-azul-principal: #0c133f;
           --cor-azul-mais-escuro: #2b2c48;
           --cor-outro-azul: #222346;
+          /* Um tom de azul para títulos/detalhes */
+          /* Dourado */
+          --cor-fundo-claro: #F8F8F8;
+          /* Um cinza muito claro para fundos */
+          --cor-azul-claro: #E0E7FF;
+          /* Um azul pastel para o fundo do ícone */
+          --cor-texto-principal: #444444;
+          /* Cor de texto para legibilidade */
+          --fonte-titulo: 'Playfair Display', serif;
+          /* Ou sua fonte de título */
+          --fonte-corpo: 'Open Sans', sans-serif;
+          /* Ou sua fonte de corpo */
+          --amarelo-gold: #cba776;
+          --azul-principal: #0c133f;
+          --azul-escuro: #2b2c48;
+          --outro-azul: #222346;
 
       }
 
- 
+
 
       /* --- Configurações Gerais --- */
       * {
@@ -184,7 +200,7 @@
           align-items: center;
 
           /* Efeito de "poeira" sutil do logo original */
-          background-image: url('./assets/Imag/background.png');
+          background-image: url('/assets/Imag/background.png');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -477,23 +493,18 @@
           right: 0px;
           /* Alinha com a borda direita do services-carousel-container */
       }
+
       .services-carousel-container {
-          position: relative;
-          width: 100%;
-          overflow-x: hidden;
-          /* Ajuste o padding para dar espaço para as setas, removendo o padding do top/bottom anterior */
+          /* ... */
           padding: 20px 60px;
-          /* Exemplo: 60px de padding em cada lado para as setas de 50px */
-          max-width: 1100px;
-          /* Garante que o contêiner principal não seja mais largo que isso */
-          margin: 0 auto;
+          /* Para as setas ficarem visíveis */
+          /* ... */
       }
 
-      /* O .services-slides-wrapper não precisa de padding lateral se o container já tem */
       .services-slides-wrapper {
           overflow: hidden;
           padding: 0;
-          /* Remove padding lateral que tínhamos adicionado aqui */
+          /* Removido o padding lateral daqui, pois o container já tem */
       }
 
       .services-carousel-slides {
@@ -508,7 +519,7 @@
       /* .services-carousel-slides { -ms-overflow-style: none; scrollbar-width: none; } */
 
 
-      /* Estilo dos Cards de Serviço */
+      /* --- Estilo dos Cards de Serviço --- */
       .service-card {
           flex: 0 0 calc(33.333% - 40px);
           /* 3 cards por linha, com gap de 20px de cada lado (será ajustado pelo gap) */
@@ -516,24 +527,30 @@
           /* Ajuste explícito da largura para 3 cards com 20px de gap */
           margin-right: 20px;
           /* Adiciona o espaçamento entre os cards */
-          /* Removido margin: 0 20px; porque agora estamos usando margin-right e gap */
 
           background-color: var(--cor-azul-mais-escuro);
-          /* Fundo dos cards */
-          border: 1px solid var(--cor-outro-azul);
-          /* Borda sutil */
-          border-radius: 8px;
-          padding: 30px;
+          /* Fundo dos cards (manter o azul escuro) */
+          /* Removido border: 1px solid var(--cor-outro-azul); */
+          border-radius: 12px;
+          /* Aumentar o border-radius para combinar com os outros cards */
+          padding: 40px 30px;
+          /* Aumentar o padding para combinar com os outros cards */
           text-align: left;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-          /* scroll-snap-align: start; (removido, pois o overflow:hidden está no wrapper) */
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+          /* Sombra mais suave, como nos cards de "Por que nos escolher" */
+
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-          min-height: 250px;
-          /* Altura mínima para cards */
+
+          /* MODIFICAÇÕES AQUI: */
+          min-height: unset;
+          /* <--- REMOVER ALTURA MÍNIMA PARA PERMITIR FLEXIBILIDADE */
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
-          /* Alinha o conteúdo ao topo */
+          justify-content: space-between;
+          /* <--- DISTRIBUI O CONTEÚDO VERTICALMENTE */
+          align-items: flex-start;
+          /* Alinha o conteúdo à esquerda */
+          /* FIM DAS MODIFICAÇÕES */
       }
 
       /* Remove a margem do último card para não ter espaço extra */
@@ -542,23 +559,58 @@
       }
 
       .service-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+          transform: translateY(-8px);
+          /* Efeito de elevação sutil, como nos outros cards */
+          box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+          /* Sombra mais intensa no hover */
       }
 
       .service-card .card-title {
           font-family: var(--fonte-titulo);
-          font-size: 1.6rem;
+          font-size: 1.8rem;
+          /* Aumentar o tamanho do título para combinar */
           color: var(--cor-amarelo-gold);
-          /* Título do card dourado */
           margin-bottom: 15px;
+          font-weight: 600;
+          /* Para combinar com o peso da fonte dos outros cards */
       }
 
       .service-card .card-description {
-          font-size: 1rem;
-          line-height: 1.6;
-          color: rgba(255, 255, 255, 0.8);
-          font-weight: 300;
+          font-size: 1.05rem;
+          /* Aumentar o tamanho da descrição */
+          line-height: 1.7;
+          /* Melhorar o espaçamento da linha */
+          color: rgba(255, 255, 255, 0.85);
+          /* Deixar o texto um pouco mais branco para contraste no fundo azul */
+          font-weight: 400;
+          /* Para combinar com o peso da fonte dos outros cards */
+          /* Adicionar um flex-grow para que a descrição ocupe o espaço restante */
+          flex-grow: 1;
+          margin-bottom: 0;
+          /* Remover margem inferior se houver para o space-between funcionar melhor */
+      }
+
+      /* --- Responsividade (Carrossel de Serviços) --- */
+      /* Mantenha suas regras de responsividade intactas para o .service-card */
+      /* Exemplo para o mobile (certifique-se de que está atualizado) */
+      @media (max-width: 600px) {
+          .service-card {
+              width: calc(100% - 40px);
+              /* Um card por linha */
+              margin-right: 40px;
+              padding: 30px 20px;
+              /* Reduzir padding para mobile */
+          }
+
+          .service-card .card-title {
+              font-size: 1.6rem;
+              /* Ajustar tamanho do título para mobile */
+          }
+
+          .service-card .card-description {
+              font-size: 0.95rem;
+              /* Ajustar tamanho da descrição para mobile */
+          }
       }
 
       /* Botões de navegação do carrossel de serviços */
@@ -628,6 +680,8 @@
       }
 
       @media (max-width: 600px) {
+
+          /* Este é o breakpoint para mobile */
           .section-title {
               font-size: 2.5rem;
           }
@@ -637,8 +691,12 @@
           }
 
           .service-card {
-              width: calc(100% - 20px);
-              /* 1 card por linha com 20px de gap */
+              /* Alterado: Agora ocupa a largura total menos o espaçamento */
+              padding: 30px 20px;
+              min-height: unset;
+              /* Um card por linha, subtrai o padding lateral do wrapper ou o margin-right */
+              /* Ajuste a margem para um espaçamento maior se desejar, ou mantenha 20px */
+              /* Para 1 card por vez, é bom ter um padding maior no .services-slides-wrapper */
           }
 
           .services-carousel-container .carousel-nav-btn {
@@ -649,11 +707,791 @@
 
           .services-carousel-container .carousel-nav-btn.prev {
               left: -10px;
-              /* Ajusta posição em telas menores */
           }
 
           .services-carousel-container .carousel-nav-btn.next {
               right: -10px;
-              /* Ajusta posição em telas menores */
+          }
+
+      }
+
+      /* --- Seção: Por que nos escolher --- */
+      .why-choose-us-section {
+          padding: 80px 0;
+          background-color: var(--cor-fundo-claro);
+          text-align: center;
+      }
+
+      .why-choose-us-section .section-title {
+          color: var(--cor-amarelo-gold);
+          margin-bottom: 60px;
+          font-size: 3rem;
+      }
+
+      .why-choose-us-grid {
+          display: grid;
+          /* Alterado: Define 4 colunas de largura igual para telas grandes */
+          grid-template-columns: repeat(4, 1fr);
+          gap: 30px;
+          justify-content: center;
+          align-items: start;
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+
+      .reason-card {
+          background-color: #ffffff;
+          border-radius: 12px;
+          padding: 40px 30px;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          min-height: 480px;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .reason-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .reason-icon {
+          width: 70px;
+          height: 70px;
+          background-color: var(--cor-azul-claro);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 25px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .reason-icon svg {
+          width: 40px;
+          height: 40px;
+          color: var(--cor-amarelo-gold);
+      }
+
+      .reason-card .card-title {
+          font-family: var(--fonte-titulo);
+          font-size: 1.8rem;
+          color: var(--cor-outro-azul);
+          margin-bottom: 15px;
+          font-weight: 600;
+      }
+
+      .reason-card .card-description {
+          font-size: 1.05rem;
+          line-height: 1.7;
+          color: var(--cor-texto-principal);
+          font-weight: 400;
+      }
+
+      /* --- Responsividade para "Por que nos escolher" --- */
+      @media (max-width: 1024px) {
+
+          /* Ajustei o breakpoint para 1024px para a quebra */
+          .why-choose-us-grid {
+              grid-template-columns: repeat(2, 1fr);
+              /* 2 colunas em telas médias */
+              gap: 25px;
+          }
+      }
+
+      @media (max-width: 768px) {
+
+          /* Este breakpoint continua para telas ainda menores */
+          .why-choose-us-section {
+              padding: 60px 0;
+          }
+
+          .why-choose-us-section .section-title {
+              font-size: 2.5rem;
+              margin-bottom: 40px;
+          }
+
+          .why-choose-us-grid {
+              grid-template-columns: 1fr;
+              /* 1 coluna em mobiles */
+              gap: 20px;
+          }
+
+          .reason-card {
+              padding: 30px 20px;
+              min-height: unset;
+          }
+
+          .reason-icon {
+              width: 60px;
+              height: 60px;
+              margin-bottom: 20px;
+          }
+
+          .reason-icon svg {
+              width: 35px;
+              height: 35px;
+          }
+
+          .reason-card .card-title {
+              font-size: 1.6rem;
+          }
+
+          .reason-card .card-description {
+              font-size: 0.95rem;
+          }
+      }
+
+      .atendimento-nacional {
+          padding: 80px 0;
+          width: 100%;
+          background-color: #fdfdfd;
+      }
+
+      /* Container (pode já existir no seu CSS) */
+      .atendimento-nacional .container {
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+
+      /* Layout Responsivo da Seção */
+      .atendimento-grid {
+          display: grid;
+          grid-template-columns: 1.1fr 1fr;
+          gap: 50px;
+          align-items: center;
+      }
+
+      /* Coluna de Texto */
+      .logo-sna {
+          width: 120px;
+          margin-bottom: 20px;
+      }
+
+      .atendimento-texto h2 {
+          font-size: 2.5rem;
+          color: var(--azul-principal);
+          margin-top: 0;
+          margin-bottom: 10px;
+      }
+
+      .atendimento-texto h3 {
+          font-size: 1.2rem;
+          color: var(--amarelo-gold);
+          margin-top: 0;
+          margin-bottom: 25px;
+          font-weight: 500;
+      }
+
+      .atendimento-texto p {
+          font-size: 1rem;
+          color: #555;
+          line-height: 1.7;
+          margin-bottom: 30px;
+      }
+
+      .atendimento-texto h4 {
+          font-size: 1.1rem;
+          color: var(--azul-principal);
+          margin-bottom: 20px;
+      }
+
+      /* Lista de estados */
+      .lista-estados {
+          list-style: none;
+          padding: 0;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px 20px;
+      }
+
+      .lista-estados li {
+          display: flex;
+          align-items: center;
+          color: #444;
+      }
+
+      /* Ícones dos estados (Exige Font Awesome) */
+      .lista-estados i {
+          color: var(--amarelo-gold);
+          margin-right: 10px;
+          font-size: 1.1rem;
+      }
+
+      /* Coluna do Mapa e Marcadores */
+
+      .atendimento-mapa-container {
+          position: relative;
+      }
+
+      .mapa-imagem {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 8px;
+      }
+
+      .mapa-marker {
+          position: absolute;
+          background-color: var(--azul-escuro);
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 4px;
+          font-size: 0.8rem;
+          font-weight: 700;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+          transform: translate(-50%, -50%);
+          transition: transform 0.2s ease;
+          cursor: pointer;
+          z-index: 5;
+          /* Para ficar abaixo do card, mas acima do mapa */
+      }
+
+      .mapa-marker:hover {
+          transform: translate(-50%, -50%) scale(1.1);
+      }
+
+      /*
+   IMPORTANTE: Ajuste 'top' e 'left' para posicionar
+   seus marcadores exatamente sobre os estados.
+*/
+      .marker-1 {
+          top: 35%;
+          /* Ex: 35% de cima */
+          left: 70%;
+          /* Ex: 70% da esquerda */
+      }
+
+      .marker-2 {
+          top: 58%;
+          left: 62%;
+      }
+
+      .marker-3 {
+          top: 72%;
+          left: 58%;
+      }
+
+      .mapa-logo-sutil {
+          position: absolute;
+          bottom: 15px;
+          left: 15px;
+          color: #000;
+          opacity: 0.1;
+          font-weight: 700;
+          font-size: 1.5rem;
+      }
+
+
+      /* Estilos dos Cards de Informação */
+
+      .mapa-card {
+          position: absolute;
+          background-color: var(--azul-principal);
+          color: #fff;
+          padding: 25px;
+          border-radius: 8px;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+          width: 280px;
+          z-index: 10;
+          /* Para ficar sobre os marcadores */
+
+          /* Escondido por padrão */
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-10px);
+          transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+      }
+
+      /* Classe .show para exibir o card */
+      .mapa-card.show {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+      }
+
+      /* IMPORTANTE: Ajuste 'top' e 'left' para posicionar
+   seus cards perto dos marcadores.
+*/
+      #card-mg {
+          top: 5%;
+          /* Posição baseada na sua imagem */
+          left: 55%;
+          transform: translateX(-50%);
+          /* Centraliza horizontalmente */
+      }
+
+      #card-rj {
+          top: 45%;
+          /* Exemplo: Posição para o marcador 2 */
+          left: 80%;
+          transform: translateX(-50%);
+      }
+
+      #card-sp {
+          top: 65%;
+          /* Exemplo: Posição para o marcador 3 */
+          left: 80%;
+          transform: translateX(-50%);
+      }
+
+      /* Estilos internos do Card */
+
+      .mapa-card-close {
+          position: absolute;
+          top: 5px;
+          right: 12px;
+          background: none;
+          border: none;
+          color: #fff;
+          font-size: 1.8rem;
+          font-weight: 300;
+          cursor: pointer;
+          opacity: 0.7;
+          transition: opacity 0.2s ease;
+      }
+
+      .mapa-card-close:hover {
+          opacity: 1;
+      }
+
+      .mapa-card-title {
+          font-size: 1.3rem;
+          color: #fff;
+          margin-top: 0;
+          margin-bottom: 10px;
+      }
+
+      .mapa-card-areas {
+          font-size: 0.9rem;
+          color: #ddd;
+          margin-bottom: 20px;
+          line-height: 1.5;
+      }
+
+      .mapa-card-areas strong {
+          color: #fff;
+          font-weight: 600;
+      }
+
+      .mapa-card-button {
+          display: inline-block;
+          background-color: var(--amarelo-gold);
+          color: var(--azul-principal);
+          padding: 10px 18px;
+          border-radius: 5px;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 0.9rem;
+          transition: all 0.2s ease;
+      }
+
+      .mapa-card-button:hover {
+          background-color: #fff;
+      }
+
+
+      /* Responsividade da Seção */
+
+      /* Para tablets e celulares (telas menores que 900px) */
+      @media (max-width: 900px) {
+          .atendimento-grid {
+              /* Muda de 2 colunas para 1 coluna */
+              grid-template-columns: 1fr;
+              gap: 40px;
+          }
+
+          .atendimento-texto {
+              /* Centraliza o texto */
+              text-align: center;
+          }
+
+          .logo-sna {
+              margin-left: auto;
+              margin-right: auto;
+          }
+
+          .lista-estados {
+              text-align: left;
+              max-width: 400px;
+              margin-left: auto;
+              margin-right: auto;
+          }
+
+          /* Responsividade dos Cards */
+          .mapa-card {
+              left: 50%;
+              width: 90%;
+              max-width: 300px;
+              transform: translateX(-50%);
+          }
+
+          /* Ajuste as posições 'top' para o layout móvel (empilhado) */
+          #card-mg {
+              top: 5%;
+          }
+
+          #card-rj {
+              top: 5%;
+          }
+
+          /* Todos aparecem no topo */
+          #card-sp {
+              top: 5%;
+          }
+      }
+
+      /* Para celulares bem pequenos */
+      @media (max-width: 480px) {
+          .lista-estados {
+              /* Faz a lista de estados ter 1 coluna só */
+              grid-template-columns: 1fr;
+          }
+
+          .atendimento-texto h2 {
+              font-size: 2rem;
+          }
+      }
+
+      /* ===================
+   FOOTER
+==================== */
+      .site-footer {
+          position: relative;
+          background-color: var(--azul-principal);
+          color: var(--texto-claro);
+          line-height: 1.6;
+          padding-top: 60px;
+          /* Espaçamento superior */
+      }
+
+      .site-footer a {
+          color: var(--texto-claro);
+          text-decoration: none;
+          transition: var(--transicao-rapida);
+      }
+
+      .site-footer a:hover {
+          color: var(--amarelo-gold);
+      }
+
+      /* Conteúdo principal do rodapé (colunas) */
+      .footer-main {
+          padding-bottom: 50px;
+      }
+
+      .footer-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          /* Mais flexível */
+          gap: 30px;
+          /* Reduzi um pouco o espaçamento */
+      }
+
+      .footer-column {
+          padding: 20px;
+          background-color: var(--outro-azul);
+          /* Fundo de card para cada coluna */
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          /* Sombra sutil para efeito 3D */
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          transition: transform 0.3s ease;
+          /* Transição para o hover */
+      }
+
+      .footer-column:hover {
+          transform: translateY(-5px);
+          /* Efeito de elevação no hover */
+      }
+
+
+      .footer-title {
+          font-size: 1.35rem;
+          /* Levemente maior */
+          font-weight: 700;
+          color: var(--amarelo-gold);
+          margin-top: 0;
+          margin-bottom: 25px;
+          position: relative;
+          padding-bottom: 10px;
+          letter-spacing: 0.5px;
+          /* Adiciona um pouco de espaçamento entre letras */
+      }
+
+      .footer-title::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50px;
+          /* Linha um pouco maior */
+          height: 3px;
+          /* Linha mais grossa */
+          background-color: var(--amarelo-gold);
+          border-radius: 2px;
+      }
+
+      .footer-column p {
+          font-size: 0.9rem;
+          color: var(--texto-cinza);
+          margin-bottom: 0;
+          line-height: 1.7;
+      }
+
+      /* Lista de contatos */
+      .contact-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      .contact-list li {
+          display: flex;
+          align-items: center;
+          /* Alinha ícone e texto centralmente */
+          margin-bottom: 15px;
+          /* Menos espaçamento entre itens */
+          font-size: 0.9rem;
+          color: var(--texto-cinza);
+      }
+
+      .contact-list li:last-child {
+          margin-bottom: 0;
+      }
+
+      .contact-list i {
+          color: var(--amarelo-gold);
+          font-size: 1.1rem;
+          margin-right: 15px;
+          width: 20px;
+          /* Largura fixa para ícones */
+          text-align: center;
+      }
+
+      .contact-list a {
+          color: var(--texto-cinza);
+          /* Cor do texto do link no contato */
+      }
+
+      .contact-list a:hover {
+          color: var(--amarelo-gold);
+      }
+
+
+      /* Links de Redes Sociais */
+      .social-links {
+          display: flex;
+          gap: 12px;
+          /* Reduzi o espaçamento */
+          margin-top: 10px;
+          /* Um pouco de espaço extra */
+      }
+
+      .social-links a {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 42px;
+          /* Maior */
+          height: 42px;
+          /* Maior */
+          background-color: var(--azul-principal);
+          /* Fundo dos ícones */
+          border-radius: 50%;
+          color: var(--amarelo-gold);
+          font-size: 1.1rem;
+          /* Maior */
+          border: 1px solid rgba(203, 167, 118, 0.3);
+          /* Borda sutil */
+          transition: var(--transicao-rapida);
+      }
+
+      .social-links a:hover {
+          background-color: var(--amarelo-gold);
+          color: var(--azul-principal);
+          transform: translateY(-4px) rotate(5deg);
+          /* Efeito mais dinâmico */
+          border-color: var(--amarelo-gold);
+      }
+
+      /* Barra inferior (Copyright) */
+      .footer-bottom {
+          background-color: rgba(0, 0, 0, 0.2);
+          /* Fundo semi-transparente do azul principal */
+          padding: 20px 0;
+          color: rgba(255, 255, 255, 0.6);
+          /* Cor do texto mais suave */
+          font-size: 0.8rem;
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          /* Linha divisória sutil */
+      }
+
+      .footer-bottom .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 15px;
+          /* Aumentei um pouco o gap */
+      }
+
+      .footer-bottom p {
+          margin: 0;
+      }
+
+      .footer-bottom .credit a {
+          color: var(--amarelo-gold);
+          font-weight: 500;
+          letter-spacing: 0.3px;
+      }
+
+      /* ===================
+   BOTÃO VOLTAR AO TOPO
+==================== */
+      .back-to-top {
+          position: fixed;
+          bottom: 30px;
+          /* Mais afastado da borda */
+          right: 30px;
+          /* Mais afastado da borda */
+          display: none;
+          width: 50px;
+          /* Maior */
+          height: 50px;
+          /* Maior */
+          background-color: var(--amarelo-gold);
+          color: var(--azul-principal);
+          font-size: 1.3rem;
+          /* Ícone maior */
+          border-radius: 50%;
+          text-align: center;
+          line-height: 50px;
+          /* Alinha verticalmente */
+          z-index: 1000;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          /* Sombra para destaque */
+          cursor: pointer;
+          opacity: 0;
+          visibility: hidden;
+          /* Esconde completamente quando não está visível */
+          transform: translateY(20px);
+          transition: opacity 0.4s ease-out, transform 0.4s ease-out, background-color 0.2s ease;
+      }
+
+      .back-to-top.show {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+      }
+
+      .back-to-top:hover {
+          background-color: #fff;
+          /* Fundo branco no hover */
+          color: var(--azul-principal);
+          /* Cor do ícone mantém */
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      }
+
+
+      /* ===================
+   RESPONSIVIDADE
+==================== */
+      @media (max-width: 992px) {
+          .footer-grid {
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              /* Colunas maiores em tablets */
+              gap: 25px;
+          }
+
+          .footer-column {
+              padding: 18px;
+          }
+
+          .footer-title {
+              font-size: 1.2rem;
+              margin-bottom: 20px;
+          }
+      }
+
+      @media (max-width: 768px) {
+          .site-footer {
+              padding-top: 40px;
+          }
+
+          .footer-main {
+              padding-bottom: 40px;
+          }
+
+          .footer-grid {
+              grid-template-columns: 1fr;
+              /* Uma única coluna em telas muito pequenas */
+              gap: 20px;
+          }
+
+          .footer-column {
+              text-align: center;
+              align-items: center;
+              /* Centraliza o conteúdo na coluna */
+          }
+
+          .footer-title::after {
+              left: 50%;
+              /* Centraliza a linha */
+              transform: translateX(-50%);
+          }
+
+          .social-links {
+              justify-content: center;
+              /* Centraliza os ícones sociais */
+          }
+
+          .footer-bottom .container {
+              flex-direction: column;
+              text-align: center;
+          }
+
+          .back-to-top {
+              bottom: 20px;
+              right: 20px;
+              width: 45px;
+              height: 45px;
+              line-height: 45px;
+              font-size: 1.1rem;
+          }
+      }
+
+      @media (max-width: 480px) {
+          .site-footer {
+              padding-top: 30px;
+          }
+
+          .footer-main {
+              padding-bottom: 30px;
+          }
+
+          .footer-title {
+              font-size: 1.1rem;
+              margin-bottom: 15px;
+          }
+
+          .footer-column {
+              padding: 15px;
+          }
+
+          .contact-list li {
+              font-size: 0.85rem;
+              margin-bottom: 10px;
+          }
+
+          .contact-list i {
+              font-size: 1rem;
+              margin-right: 10px;
           }
       }
