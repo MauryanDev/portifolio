@@ -871,6 +871,9 @@
           width: 120px;
           margin-bottom: 20px;
       }
+      .atendimento-texto{
+        margin-bottom: 10%;
+      }
 
       .atendimento-texto h2 {
           font-size: 2.5rem;
